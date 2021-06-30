@@ -1,18 +1,33 @@
 using System.Collections.Generic;
+using System.IO;
 using ProjetoInstaDev.Interfaces;
 
 namespace ProjetoInstaDev.Models
 {
     public class Usuario : Instadev_Base, IUsuario
     {
+        public string Nome { get; set; }
+        public int Id { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
+        public string UserName { get; set;}
+
+        private const string CAMINHO = "Database/Usuario";
+        public Usuario(){
+            CriarPastaEArquivo(CAMINHO);
+        }
         public void Alterar(Usuario u)
         {
-            throw new System.NotImplementedException();
+            List<string> linhas = LerTodasAsLinhas(CAMINHO);
+            linhas.RemoveAll(x => x.Split(";")[4] == u.UserName.ToString());
+            linhas.Add(Preparar(u));
+            ReescrevaCSV(CAMINHO, linhas);
         }
 
         public void Criar(Usuario u)
         {
-            throw new System.NotImplementedException();
+            string[] linha = {Preparar(u)};
+            File.AppendAllLines(CAMINHO, linha);
         }
 
         public void Deletar(int id)
@@ -25,9 +40,9 @@ namespace ProjetoInstaDev.Models
             throw new System.NotImplementedException();
         }
 
-        public void Preparar(Usuario u)
+        public string Preparar(Usuario u)
         {
-            throw new System.NotImplementedException();
+            return $"{u.Nome};{u.Id};{u.Email};{u.Senha};{u.UserName}";
         }
     }
 }
