@@ -151,11 +151,24 @@ main{
 .perfil_like_e_coment{
     display: flex;
     justify-content: space-between;
-    width: 95px;
+    width: 85px;
 }
 
-.perfil_like_e_coment img{
-    width:  1.3vw;
+.perfil_btn_publi_c{
+    font-size:  1.6vw;
+}
+
+.perfil_btn_publi_c i:hover{
+    color: #2686CC;
+}
+
+.perfil_btn_publi i{
+    font-size:  1.6vw;
+    color: #000000;
+}
+
+.perfil_btn_publi i:hover{
+    color: #ff0000;
 }
 
 .perfil_num_like{
@@ -177,9 +190,19 @@ main{
 .perfil_coment_resp span{
     font-weight: bold;
 }
+
 .perfil_coment_resp p{
     font-size: 15px;
     margin: 0 70px 0 20px;
+}
+
+.perfil_btn_publi_resp{
+    font-size:  1vw;
+    color: #000000;
+}
+
+.perfil_btn_publi_resp i:hover{
+    color: #ff0000;
 }
 
 .perfil_coment img{
@@ -201,7 +224,13 @@ footer{
     height: 194px;
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.perfil_footer_sec{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .links_úteis{
@@ -215,8 +244,13 @@ footer{
     color: black;
 }
 
+
 .links_úteis a{
     color: black;
+}
+
+.links_úteis a:hover{
+    color: #909090;
 }
 
 .links_úteis li{
