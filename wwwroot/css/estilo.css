@@ -47,6 +47,7 @@ header{
 main{
     margin-top: 53px;
     background-color: #FAFAFA;
+    height: 100%;
 }
 
 .perfil_publi_info{
@@ -60,6 +61,12 @@ main{
 
 .perfil_userName{
     font-size: 26px;
+    font-weight: normal;
+}
+
+.perfil_name{
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .perfil_informacoes{
@@ -142,10 +149,16 @@ main{
     display: flex;
     flex-direction: column;
     /* height: 10px; */
+    margin: 10px 0 10px 10px;
+}
+
+.perfil_nome_e_local a{
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .perfil_nome_e_local span{
-    font-size: 11px;
+    /* font-size: 11px; */
 }
 
 .perfil_like_e_coment{
