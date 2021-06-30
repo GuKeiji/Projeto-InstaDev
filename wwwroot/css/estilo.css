@@ -104,11 +104,20 @@ main{
     margin: 10px 0 25px 32%;
 }
 
+.perfil_visu_publicacoes span{
+    text-transform: uppercase;
+}
+
 .perfil_box_conteudo{
     display: flex;
     background-color: #ffff;
-    width: 890px;
+    width: 47%;
     margin: 25px 25% 0;
+}
+
+.perfil_img_publi{
+    width: 430px;
+    height: 430px;
 }
 
 .perfil_foto_perfil{
@@ -132,7 +141,11 @@ main{
 .perfil_nome_e_local{
     display: flex;
     flex-direction: column;
-    height: 10px;
+    /* height: 10px; */
+}
+
+.perfil_nome_e_local span{
+    font-size: 11px;
 }
 
 .perfil_like_e_coment{
@@ -142,7 +155,7 @@ main{
 }
 
 .perfil_like_e_coment img{
-    width: 30px;
+    width:  1.3vw;
 }
 
 .perfil_num_like{
