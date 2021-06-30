@@ -42,7 +42,7 @@ namespace ProjetoInstaDev.Models
             File.AppendAllLines(CAMINHO, post);
         }
 
-        public List<Post> ListarFeed(int id)
+        public List<Post> ListarFeed()
         {
             List<Post> posts = new List<Post>();
 
