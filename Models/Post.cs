@@ -6,9 +6,26 @@ namespace ProjetoInstaDev.Models
 {
     public class Post : Instadev_Base, IPost
     {
+        private int Id { get; set; }
+
+        public string Legenda { get; set; }
+
+        public string Imagem { get; set; }
+
+        public Usuario EnviadoPor { get; set; }
+
+        private const string CAMINHO = "Database/Post.csv";
+
+        public Post()
+        {
+            CriarPastaEArquivo(CAMINHO);
+        }
+
         public void Criar(Post p)
         {
-            throw new System.NotImplementedException();
+            string[] post = { Preparar(p) };
+
+            File.AppendAllLines(CAMINHO, post);
         }
 
         public List<Post> ListarFeed(int id)
@@ -36,9 +53,9 @@ namespace ProjetoInstaDev.Models
             throw new System.NotImplementedException();
         }
 
-        public void Preparar(Post p)
+        public string Preparar(Post p)
         {
-            throw new System.NotImplementedException();
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor}";
         }
     }
 }
