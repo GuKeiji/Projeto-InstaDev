@@ -6,7 +6,7 @@ namespace ProjetoInstaDev.Interfaces
     public interface IPost
     {
         void Criar(Post p);
-        void Preparar(Post p);
+        string Preparar(Post p);
         List<Post> ListarFeed(int id);
         List<Post> ListarPerfil(int id);
 
