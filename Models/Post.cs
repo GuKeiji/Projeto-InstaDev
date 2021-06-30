@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using ProjetoInstaDev.Interfaces;
@@ -6,7 +7,15 @@ namespace ProjetoInstaDev.Models
 {
     public class Post : Instadev_Base, IPost
     {
-        private int Id { get; set; }
+        public Post(int id, string legenda, string imagem, Usuario enviadoPor) 
+        {
+            this.Id = id;
+                this.Legenda = legenda;
+                this.Imagem = imagem;
+                this.EnviadoPor = enviadoPor;
+               
+        }
+                private int Id { get; set; }
 
         public string Legenda { get; set; }
 
@@ -19,6 +28,11 @@ namespace ProjetoInstaDev.Models
         public Post()
         {
             CriarPastaEArquivo(CAMINHO);
+        }
+
+        public string Preparar(Post p)
+        {
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor}";
         }
 
         public void Criar(Post p)
@@ -39,10 +53,9 @@ namespace ProjetoInstaDev.Models
 
                 Post post = new Post();
                 
-                post.Id = linha[0];
+                post.Id = Int32.Parse(linha[0]);
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
-                post.EnviadoPor
                 posts.Add(post); 
             }
             return posts;
@@ -53,9 +66,6 @@ namespace ProjetoInstaDev.Models
             throw new System.NotImplementedException();
         }
 
-        public string Preparar(Post p)
-        {
-            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor}";
-        }
+        
     }
 }
