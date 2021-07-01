@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using ProjetoInstaDev.Interfaces;
@@ -33,12 +34,31 @@ namespace ProjetoInstaDev.Models
 
         public void Deletar(int id)
         {
-            throw new System.NotImplementedException();
+            List<string> linhas = LerTodasAsLinhas(CAMINHO);
+            linhas.RemoveAll(x =>x.Split(";")[0] == id.ToString());
+            ReescrevaCSV(CAMINHO, linhas);
         }
 
         public List<Usuario> ListarDados()
         {
-            throw new System.NotImplementedException();
+            List<Usuario> usuario = new List<Usuario>();
+
+             string[] linhas = File.ReadAllLines(CAMINHO);
+             foreach (var item in linhas)
+             {
+                 string [] linha = item.Split(";");
+
+                 Usuario usuario1 = new Usuario();
+
+                
+                 usuario1.Nome = linha[0];
+                 usuario1.Id = Int32.Parse(linha[1]);
+                 usuario1.Email = linha[2];
+                 usuario1.Senha = linha[3];
+                 usuario1.UserName = linha[4];
+                 usuario.Add(usuario1);
+             }
+             return usuario;
         }
 
         public string Preparar(Usuario u)
