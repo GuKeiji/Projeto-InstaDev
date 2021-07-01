@@ -50,7 +50,6 @@ namespace ProjetoInstaDev.Models
 
                  Usuario usuario1 = new Usuario();
 
-                
                  usuario1.Nome = linha[0];
                  usuario1.Id = Int32.Parse(linha[1]);
                  usuario1.Email = linha[2];

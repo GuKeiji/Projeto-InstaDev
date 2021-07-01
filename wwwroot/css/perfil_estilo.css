@@ -99,6 +99,7 @@ main{
 .perfil_nome_sair a{
     color: #2686CC;    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
 }
 
 .line{
@@ -119,7 +120,7 @@ main{
     display: flex;
     background-color: #ffff;
     width: 47%;
-    margin: 25px 25% 0;
+    margin: 1% 25% 0;
 }
 
 .perfil_img_publi{
