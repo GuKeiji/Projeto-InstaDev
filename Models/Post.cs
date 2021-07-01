@@ -10,9 +10,9 @@ namespace ProjetoInstaDev.Models
         public Post(int id, string legenda, string imagem, Usuario enviadoPor) 
         {
             this.Id = id;
-                this.Legenda = legenda;
-                this.Imagem = imagem;
-                this.EnviadoPor = enviadoPor;
+            this.Legenda = legenda;
+            this.Imagem = imagem;
+            this.EnviadoPor = enviadoPor;
                
         }
                 private int Id { get; set; }
@@ -42,7 +42,7 @@ namespace ProjetoInstaDev.Models
             File.AppendAllLines(CAMINHO, post);
         }
 
-        public List<Post> ListarFeed(int id)
+        public List<Post> ListarFeed()
         {
             List<Post> posts = new List<Post>();
 

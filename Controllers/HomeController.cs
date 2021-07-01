@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProjetoInstaDev.Models;
@@ -20,6 +21,7 @@ namespace ProjetoInstaDev.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Username = HttpContext.Session.GetString("_userName");
             return View();
         }
 
