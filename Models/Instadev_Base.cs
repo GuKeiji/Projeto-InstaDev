@@ -19,7 +19,7 @@ namespace ProjetoInstaDev.Models
             }
         }
 
-        protected List<string> LerTodasAsLinhas(string CAMINHO)
+        public List<string> LerTodasAsLinhas(string CAMINHO)
         {
 
             List<string> linhas = new List<string>();
