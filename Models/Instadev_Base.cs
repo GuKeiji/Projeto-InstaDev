@@ -36,13 +36,18 @@ namespace ProjetoInstaDev.Models
 
         protected void ReescrevaCSV(string CAMINHO, List<string> linhas)
         {
-            using(StreamWriter output = new StreamWriter(CAMINHO))
+            using (StreamWriter output = new StreamWriter(CAMINHO))
             {
                 foreach (var item in linhas)
                 {
                     output.Write(item + "\n");
                 }
             }
+        }
+        public int GerarId(int id)
+        {
+
+            return id++;
         }
     }
 }

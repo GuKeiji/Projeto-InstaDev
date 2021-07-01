@@ -42,7 +42,7 @@ namespace ProjetoInstaDev.Controllers
             // {
             //     novoPost.Imagem = "semimagem.png";
             // }
-
+            postPai.SetarId(postPai.GerarId(postPai.PegarId()));
             postPai.Criar(novoPost);
             ViewBag.Posts = postPai.ListarFeed();
 
