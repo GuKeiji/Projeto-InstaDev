@@ -56,6 +56,7 @@ namespace ProjetoInstaDev.Models
                  usuario1.Email = linha[2];
                  usuario1.Senha = linha[3];
                  usuario1.UserName = linha[4];
+                 usuario1.ImagemUsuario = linha[5];
                  usuario.Add(usuario1);
              }
              return usuario;
