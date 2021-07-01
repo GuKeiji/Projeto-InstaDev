@@ -8,7 +8,7 @@ namespace ProjetoInstaDev.Interfaces
         void Criar(Post p);
         string Preparar(Post p);
         List<Post> ListarFeed();
-        List<Post> ListarPerfil(int id);
+        List<Post> ListarPerfil(Usuario UserName);
 
     }
 }

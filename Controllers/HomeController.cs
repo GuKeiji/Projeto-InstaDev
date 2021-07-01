@@ -21,7 +21,7 @@ namespace ProjetoInstaDev.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.Username = HttpContext.Session.GetString("_userName");
+            ViewBag.UserName = HttpContext.Session.GetString("_userName");
             return View();
         }
 

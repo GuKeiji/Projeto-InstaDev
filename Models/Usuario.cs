@@ -14,7 +14,7 @@ namespace ProjetoInstaDev.Models
         public string UserName { get; set;}
         public string ImagemUsuario { get; set;}
 
-        private const string CAMINHO = "Database/Usuario";
+        private const string CAMINHO = "Database/Usuario.csv";
         public Usuario(){
             CriarPastaEArquivo(CAMINHO);
         }
@@ -50,7 +50,6 @@ namespace ProjetoInstaDev.Models
 
                  Usuario usuario1 = new Usuario();
 
-                
                  usuario1.Nome = linha[0];
                  usuario1.Id = Int32.Parse(linha[1]);
                  usuario1.Email = linha[2];

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoInstaDev</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/perfil_estilo.css" />
 </head>
 <body>
     <header>
@@ -24,6 +24,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li><a asp-area="" asp-controller="Perfil" asp-action="Index">Perfil</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,10 +36,17 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - ProjetoInstaDev - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+    <footer>
+        <section class="perfil_footer_sec">
+            <ul class="links_úteis">
+                <span>Links úteis:</span>
+                <li><a href="#">Regras de utilização</a></li>
+                <li><a href="#">Suporte</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+            <span>© 2021 INSTADEV DO SENAI INFO</span>
+        </section>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
