@@ -30,6 +30,14 @@ namespace ProjetoInstaDev.Models
             CriarPastaEArquivo(CAMINHO);
         }
 
+        public int PegarId(){
+            return this.Id;
+        }
+        public int SetarId(int _id)
+        {
+            this.Id = _id;
+            return this.Id;
+        }
         public string Preparar(Post p)
         {
             return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName}";

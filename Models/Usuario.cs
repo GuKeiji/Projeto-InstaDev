@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.AspNetCore.Http;
 using ProjetoInstaDev.Interfaces;
 
 namespace ProjetoInstaDev.Models
@@ -17,6 +18,20 @@ namespace ProjetoInstaDev.Models
         private const string CAMINHO = "Database/Usuario.csv";
         public Usuario(){
             CriarPastaEArquivo(CAMINHO);
+        }
+        public string PegarSenha(){
+            return this.Senha;
+        }
+        public string SetarSenha(string _senha){
+            this.Senha = _senha;
+            return this.Senha;
+        }
+        public int PegarId(){
+            return this.Id;
+        }
+        public int SetarId(int _id){
+            this.Id = _id;
+            return this.Id;
         }
         public void Alterar(Usuario u)
         {
