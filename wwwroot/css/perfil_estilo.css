@@ -14,36 +14,6 @@
     /* background-color: turquoise; */
 }
 
-header{
-    background-color: #ffff;
-    width: 100%;
-    position: fixed;
-    height: 53px;
-    z-index: 99;
-    top: 0;
-}
-
-.perfil_header_container{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.perfil_header_container img{
-    width: 5vw;
-}
-
-.perfil_header_nav{
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.perfil_header_nav img{
-    width: 50%;
-}
-
 main{
     margin-top: 53px;
     background-color: #FAFAFA;
@@ -76,6 +46,12 @@ main{
     margin: 0 5vw;
 }
 
+.perfil_fto_principal{
+    height: 152px;
+    width: 152px;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+
 .perfil_dados{
     display: flex;
     justify-content: space-between;
@@ -103,7 +79,7 @@ main{
 }
 
 .line{
-    margin: 0 28vw 0px 25VW;
+    margin: 0 28vw 0 25vw;
     background-color: #DCDCDC;
     height: 1px;
 }
@@ -119,7 +95,7 @@ main{
 .perfil_box_conteudo{
     display: flex;
     background-color: #ffff;
-    width: 47%;
+    width: 890px;
     margin: 1% 25% 0;
 }
 
@@ -129,6 +105,7 @@ main{
 }
 
 .perfil_foto_perfil{
+    clip-path: ellipse(50% 50% at 50% 50%);
     width: 70px;
     height: 70px;
 }
@@ -221,7 +198,6 @@ main{
 
 .perfil_sec_coments button{
     margin-top: 10px;
-    width: 212px;
     text-decoration: none;
     text-transform: uppercase;
     color: #909090;
