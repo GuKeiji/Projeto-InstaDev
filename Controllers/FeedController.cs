@@ -22,14 +22,14 @@ namespace ProjetoInstaDev.Controllers
             if (form.Files.Count > 0)
             {
                 var file = form.Files[0];
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
+                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imgpost/Post");
 
                 if (!Directory.Exists(folder))
                 {
                     Directory.CreateDirectory(folder);
                 }
 
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/", folder, file.FileName);
+                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/imgpost/", folder, file.FileName);
 
                 using (var stream = new FileStream(path, FileMode.Create))
                 {
