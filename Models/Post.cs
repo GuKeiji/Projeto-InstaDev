@@ -63,7 +63,10 @@ namespace ProjetoInstaDev.Models
 
         public List<Post> ListarPerfil(int id)
         {
-            throw new System.NotImplementedException();
+            List<Post> PostsPerfil = new List<Post>();
+            List<Usuario> UsuarioLogado = new List<Usuario>();
+            // var PostsLogado = PostsPerfil.Find( )
+            return PostsPerfil;
         }
 
         
