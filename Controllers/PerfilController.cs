@@ -26,7 +26,6 @@ namespace Projeto_InstaDev.Controllers
         [Route("Logout")]
         public IActionResult Logout(){
             HttpContext.Session.Remove("_UserName");
-
             return LocalRedirect("~/Login");
         }
     }
