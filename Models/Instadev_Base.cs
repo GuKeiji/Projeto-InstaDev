@@ -46,7 +46,6 @@ namespace ProjetoInstaDev.Models
         }
         public int GerarId(int id)
         {
-
             return id++;
         }
     }

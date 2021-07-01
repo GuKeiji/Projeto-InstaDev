@@ -36,8 +36,6 @@ namespace ProjetoInstaDev.Models
         public int SetarId(int _id)
         {
             this.Id = _id;
-
-
             return this.Id;
         }
         public string Preparar(Post p)
