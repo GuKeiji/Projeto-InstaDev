@@ -5,7 +5,7 @@ namespace ProjetoInstaDev.Models
 {
     public class Instadev_Base
     {
-        protected void CriarPastaEArquivo(string _caminho)
+        public void CriarPastaEArquivo(string _caminho)
         {
             string folder = _caminho.Split("/")[0];
             if (!Directory.Exists(folder))
@@ -19,7 +19,7 @@ namespace ProjetoInstaDev.Models
             }
         }
 
-        protected List<string> LerTodasAsLinhas(string CAMINHO)
+        public List<string> LerTodasAsLinhas(string CAMINHO)
         {
 
             List<string> linhas = new List<string>();
@@ -34,7 +34,7 @@ namespace ProjetoInstaDev.Models
             return linhas;
         }
 
-        protected void ReescrevaCSV(string CAMINHO, List<string> linhas)
+        public void ReescrevaCSV(string CAMINHO, List<string> linhas)
         {
             using (StreamWriter output = new StreamWriter(CAMINHO))
             {
