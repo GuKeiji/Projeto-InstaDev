@@ -8,10 +8,11 @@ namespace ProjetoInstaDev.Models
     public class Usuario : Instadev_Base, IUsuario
     {
         public string Nome { get; set; }
-        public int Id { get; set; }
+        private int Id;
         public string Email { get; set; }
-        public string Senha { get; set; }
+        private string Senha;
         public string UserName { get; set;}
+        public string ImagemUsuario { get; set;}
 
         private const string CAMINHO = "Database/Usuario.csv";
         public Usuario(){
@@ -62,7 +63,7 @@ namespace ProjetoInstaDev.Models
 
         public string Preparar(Usuario u)
         {
-            return $"{u.Nome};{u.Id};{u.Email};{u.Senha};{u.UserName}";
+            return $"{u.Nome};{u.Id};{u.Email};{u.Senha};{u.UserName};{u.ImagemUsuario}";
         }
     }
 }
