@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.perfil_container{
+    width: 80vw;
+    height: unset;
+    padding: 0 25%;
+    /* background-color: turquoise; */
+}
+
+header{
+    background-color: #ffff;
+    width: 100%;
+    position: fixed;
+    height: 53px;
+    z-index: 99;
+    top: 0;
+}
+
+.perfil_header_container{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.perfil_header_container img{
+    width: 5vw;
+}
+
+.perfil_header_nav{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil_header_nav img{
+    width: 50%;
+}
+
+main{
+    margin-top: 53px;
+    background-color: #FAFAFA;
+}
+
+.perfil_publi_info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil_publi_info img{
+    margin: 50px 10px;
+}
+
+.perfil_userName{
+    font-size: 26px;
+}
+
+.perfil_informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 5vw;
+}
+
+.perfil_dados{
+    display: flex;
+    justify-content: space-between;
+    width: 390px;
+    margin: 10px 0;
+}
+
+.perfil_dados span{
+    margin: 10px 0;
+}
+
+.perfil_nome_sair{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil_nome_sair span{
+    font-weight: bold;
+}
+
+.perfil_nome_sair a{
+    color: #2686CC;    
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.line{
+    margin: 0 28vw 0px 25VW;
+    background-color: #DCDCDC;
+    height: 1px;
+}
+
+.perfil_visu_publicacoes{
+    margin: 10px 0 25px 32%;
+}
+
+.perfil_visu_publicacoes span{
+    text-transform: uppercase;
+}
+
+.perfil_box_conteudo{
+    display: flex;
+    background-color: #ffff;
+    width: 47%;
+    margin: 25px 25% 0;
+}
+
+.perfil_img_publi{
+    width: 430px;
+    height: 430px;
+}
+
+.perfil_foto_perfil{
+    width: 70px;
+    height: 70px;
+}
+
+.perfil_sec_coments{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.perfil_foto_e_local{
+    display: flex;
+    margin: 30px;
+    margin-left: 0px;
+    width: 100%;
+}
+
+.perfil_nome_e_local{
+    display: flex;
+    flex-direction: column;
+    /* height: 10px; */
+}
+
+.perfil_nome_e_local span{
+    font-size: 11px;
+}
+
+.perfil_like_e_coment{
+    display: flex;
+    justify-content: space-between;
+    width: 85px;
+}
+
+.perfil_btn_publi_c{
+    font-size:  1.6vw;
+}
+
+.perfil_btn_publi_c i:hover{
+    color: #2686CC;
+}
+
+.perfil_btn_publi i{
+    font-size:  1.6vw;
+    color: #000000;
+}
+
+.perfil_btn_publi i:hover{
+    color: #ff0000;
+}
+
+.perfil_num_like{
+    margin-bottom: 30px;
+}
+
+.perfil_coment{
+    margin-top: 10px;
+    width: 382px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil_coment_resp{
+    width: 100%;
+    display: flex;
+}
+
+.perfil_coment_resp span{
+    font-weight: bold;
+}
+
+.perfil_coment_resp p{
+    font-size: 15px;
+    margin: 0 70px 0 20px;
+}
+
+.perfil_btn_publi_resp{
+    font-size:  1vw;
+    color: #000000;
+}
+
+.perfil_btn_publi_resp i:hover{
+    color: #ff0000;
+}
+
+.perfil_coment img{
+    width: 20px;
+}
+
+.perfil_sec_coments button{
+    margin-top: 10px;
+    width: 212px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #909090;
+    background-color: #ffff;
+    border: none;
+}
+
+footer{
+    background-color: #E5E5E5;
+    height: 194px;
+    display: flex;
+    justify-content: center;
+}
+
+.perfil_footer_sec{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.links_úteis{
+    width: 600px;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links_úteis{
+    color: black;
+}
+
+
+.links_úteis a{
+    color: black;
+}
+
+.links_úteis a:hover{
+    color: #909090;
+}
+
+.links_úteis li{
+    list-style-type: none;
+}
