@@ -8,12 +8,14 @@ namespace Projeto_InstaDev.Controllers
     public class PerfilController : Controller
     {
         Usuario usuarioModel = new Usuario();
+        Post postModel = new Post();
 
         [Route("Listar")]
         public IActionResult Index()
         {
-            ViewBag.Usuarios = usuarioModel.ListarDados();
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            ViewBag.Usuarios = usuarioModel.ListarDados();
+            ViewBag.Usuarios = postModel.ListarPerfil(ViewBag.UserName);
             return View();
         }
 

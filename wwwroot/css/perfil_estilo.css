@@ -78,14 +78,27 @@ main{
     text-decoration: none;
 }
 
+.perfil_publicacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .line{
-    margin: 0 28vw 0 25vw;
     background-color: #DCDCDC;
     height: 1px;
+    width: 890px;
+    align-self: center;
+}
+
+.perfil_post{
+    display: flex;
+    justify-content: center;
 }
 
 .perfil_visu_publicacoes{
-    margin: 10px 0 25px 32%;
+    margin: 20px 32% 25px 0;
 }
 
 .perfil_visu_publicacoes span{
@@ -96,7 +109,7 @@ main{
     display: flex;
     background-color: #ffff;
     width: 890px;
-    margin: 1% 25% 0;
+    margin: 1%;
 }
 
 .perfil_img_publi{
@@ -141,8 +154,9 @@ main{
     width: 85px;
 }
 
-.perfil_btn_publi_c{
+.perfil_btn_publi_c i{
     font-size:  1.6vw;
+    color: #000000;
 }
 
 .perfil_btn_publi_c i:hover{
