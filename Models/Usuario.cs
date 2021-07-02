@@ -39,7 +39,7 @@ namespace ProjetoInstaDev.Models
             ReescrevaCSV(CAMINHO, linhas);
         }
 
-        public List<Usuario> ListarDados()
+        public List<Usuario> LerDados()
         {
             List<Usuario> usuario = new List<Usuario>();
 

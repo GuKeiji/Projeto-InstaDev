@@ -7,7 +7,7 @@ namespace ProjetoInstaDev.Interfaces
     {
         void Criar(Usuario u);
         string Preparar(Usuario u);
-        List<Usuario> ListarDados();
+        List<Usuario> LerDados();
         void Alterar(Usuario u);
         void Deletar(int id);
     }
