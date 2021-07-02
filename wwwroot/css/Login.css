@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background: #ffffff;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FAFAFA;
+    height: 650px;
+
+}
+
+.login_principal{
+    display: flex;
+    justify-content: space-around;
+    width: 342px;
+    height: 380px;
+    left: 789px;
+    top: 162px;
+
+    background: #ffffff;
+    border: 1px solid #f1f1f1;
+    box-sizing: border-box;
+}
+.login_space_btw {
+
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.login_grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 130px; 
+}
+
+.login_imagem {
+    display: flex;
+    justify-content: center;
+    left: 877px;
+    top: 195px;
+
+    font-family: Billabong;
+    font-style: normal;
+    font-weight: normal;
+    
+    line-height: 76px;
+}
+
+.login_btn{
+    display: flex;
+    justify-content: center;
+}
+
+   
+.login_btn_banner {
+    width: 267px;
+    height: 30px;
+    left: 835px;
+    top: 378px;
+    
+    background: #2686CC;
+    border-radius: 2px;
+    color: white;
+    border: white;
+}
+.login_email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.login_input_login1{
+    
+    width: 267px;
+    height: 35px;
+    left: 45px;
+    top: 135px;
+
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 12px;
+}
+.login_input_login2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 267px;
+    height: 35px;
+    left: 45px;
+    top: 170px;
+
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-top: 9px;
+    padding: 12px;
+}
+
+
+.login_hr{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.login_hr1{
+    
+    width: 109px;
+height: 0px;
+left: 826px;
+top: 440px;
+
+border: 1px solid #CBCBCB;
+}
+.login_hr2{
+    width: 109px;
+    height: 0px;
+    left: 984px;
+    top: 440px;
+
+    border: 1px solid #CBCBCB;
+}
+.login_ou{
+    
+    height: 16px;
+    left: 951px;
+    top: 432px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #909090;
+}
+
+.login_esqueceu{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.login_trocar{
+    
+    width: 100px;
+    height: 16px;
+    left: 910px;
+    top: 480px;
+
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2686CC;
+}
+.login_novo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 342px;
+    height: 75px;
+    left: 789px;
+    top: 551px;
+
+    background: #FFFFFF;
+    border: 1px solid #F4F4F4;
+    box-sizing: border-box;
+    margin-top: 9px;
+}
+.login_cadastre_se{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 178px;
+    height: 16px;
+    left: 80px;
+    top: 35px;
+
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #353535;
+}
+
+.login_espaco{
+    
+left: 903px;
+top: 647px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 16px;
+margin: 15px;
+align-items: center;
+
+
+color: #353535;
+}
+
+.login_app{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 113px;
+    height: 16px;
+    left: 903px;
+    top: 647px;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: #353535;
+}
+
+.login_baixe{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+}
+
+.login_instale_ios{
+    
+    width: 133px;
+    height: 39px;
+    left: 825px;
+    top: 684px;
+}
+.login_instale_android{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 39px;
+    left: 963px;
+    top: 684px;
+}
+
+
+a{
+    text-decoration: none;
+
+}
+
+footer{
+    height: 293px;
+}
