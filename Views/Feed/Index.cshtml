@@ -68,8 +68,8 @@
                 </div>
                 <div class="feed_post_interacoes">
                     <div class="feed_post_organizar_interacoes">
-                        <img src="imagens/Vector.png" alt="Curtir">
-                        <img src="imagens/balaozinho.png" alt="Comentários">
+                        <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                        <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
                         <div>
                             <input class="feed_post_comentar" type="text" placeholder="Comentar...">
                         </div>
@@ -95,7 +95,7 @@
             </a>
             <div class="feed_organizar_perfil_logado">
                 <span class="feed_nome">@ViewBag.UserName</span>
-                <span class="feed_nome_real">Thomas</span>
+                <span class="feed_nome_real">@ViewBag.Nome</span>
             </div>
         </div>
     </aside>

@@ -8,12 +8,14 @@ namespace Projeto_InstaDev.Controllers
     public class PerfilController : Controller
     {
         Usuario usuarioModel = new Usuario();
+        Post postModel = new Post();
 
         [Route("Listar")]
         public IActionResult Index()
         {
-            ViewBag.Usuarios = usuarioModel.ListarDados();
             ViewBag.UserName = HttpContext.Session.GetString("_UserName");
+            ViewBag.Usuarios = usuarioModel.ListarDados();
+            ViewBag.Posts = postModel.ListarPerfil(ViewBag.UserName);
             return View();
         }
 
@@ -26,7 +28,7 @@ namespace Projeto_InstaDev.Controllers
         [Route("Logout")]
         public IActionResult Logout(){
             HttpContext.Session.Remove("_UserName");
-            return LocalRedirect("~/Login");
+            return LocalRedirect("~/Home");
         }
     }
 }

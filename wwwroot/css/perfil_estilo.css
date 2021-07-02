@@ -14,36 +14,6 @@
     /* background-color: turquoise; */
 }
 
-header{
-    background-color: #ffff;
-    width: 100%;
-    position: fixed;
-    height: 53px;
-    z-index: 99;
-    top: 0;
-}
-
-.perfil_header_container{
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.perfil_header_container img{
-    width: 5vw;
-}
-
-.perfil_header_nav{
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.perfil_header_nav img{
-    width: 50%;
-}
-
 main{
     margin-top: 53px;
     background-color: #FAFAFA;
@@ -76,6 +46,12 @@ main{
     margin: 0 5vw;
 }
 
+.perfil_fto_principal{
+    height: 152px;
+    width: 152px;
+    clip-path: ellipse(50% 50% at 50% 50%);
+}
+
 .perfil_dados{
     display: flex;
     justify-content: space-between;
@@ -102,14 +78,27 @@ main{
     text-decoration: none;
 }
 
+.perfil_publicacoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .line{
-    margin: 0 28vw 0px 25VW;
     background-color: #DCDCDC;
     height: 1px;
+    width: 890px;
+    align-self: center;
+}
+
+.perfil_post{
+    display: flex;
+    justify-content: center;
 }
 
 .perfil_visu_publicacoes{
-    margin: 10px 0 25px 32%;
+    margin: 20px 32% 25px 0;
 }
 
 .perfil_visu_publicacoes span{
@@ -119,8 +108,8 @@ main{
 .perfil_box_conteudo{
     display: flex;
     background-color: #ffff;
-    width: 47%;
-    margin: 1% 25% 0;
+    width: 890px;
+    margin: 1%;
 }
 
 .perfil_img_publi{
@@ -129,6 +118,7 @@ main{
 }
 
 .perfil_foto_perfil{
+    clip-path: ellipse(50% 50% at 50% 50%);
     width: 70px;
     height: 70px;
 }
@@ -164,8 +154,9 @@ main{
     width: 85px;
 }
 
-.perfil_btn_publi_c{
+.perfil_btn_publi_c i{
     font-size:  1.6vw;
+    color: #000000;
 }
 
 .perfil_btn_publi_c i:hover{
@@ -221,7 +212,6 @@ main{
 
 .perfil_sec_coments button{
     margin-top: 10px;
-    width: 212px;
     text-decoration: none;
     text-transform: uppercase;
     color: #909090;

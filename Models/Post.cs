@@ -10,12 +10,12 @@ namespace ProjetoInstaDev.Models
         public Post(int id, string legenda, string imagem, Usuario enviadoPor) 
         {
             this.Id = id;
-            this.Legenda = legenda;
-            this.Imagem = imagem;
-            this.EnviadoPor = enviadoPor;
+                this.Legenda = legenda;
+                this.Imagem = imagem;
+                this.EnviadoPor = enviadoPor;
                
         }
-        private int Id { get; set; }
+                private int Id { get; set; }
 
         public string Legenda { get; set; }
 
@@ -40,7 +40,7 @@ namespace ProjetoInstaDev.Models
         }
         public string Preparar(Post p)
         {
-            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName};{p.EnviadoPor.ImagemUsuario}";
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor}";
         }
 
         public void Criar(Post p)
@@ -64,37 +64,14 @@ namespace ProjetoInstaDev.Models
                 post.Id = Int32.Parse(linha[0]);
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
-                post.EnviadoPor.UserName = linha[3];
-                post.EnviadoPor.ImagemUsuario = linha [4];
                 posts.Add(post); 
             }
             return posts;
         }
 
-        public List<Post> ListarPerfil(Usuario UserName)
+        public List<Post> ListarPerfil(int id)
         {
-            List<Post> PostsPerfil = new List<Post>();
-
-            string[] linhas = File.ReadAllLines(CAMINHO);
-            foreach (var item in linhas)
-            {
-                
-                string[] linha = item.Split(";");
-                
-                if (UserName.ToString() == linha[3])
-                {
-                 
-                    Post post = new Post();
-
-                    post.Id = Int32.Parse(linha[0]);
-                    post.Legenda = linha[1];
-                    post.Imagem = linha[2];
-                    post.EnviadoPor.UserName = linha[3];
-                    PostsPerfil.Add(post);
-                }
-
-            } 
-            return PostsPerfil;
+            throw new System.NotImplementedException();
         }
 
         
