@@ -9,7 +9,7 @@ namespace Projeto_InstaDev.Controllers
     public class CadastroController : Controller
     {
         Usuario UsuarioModel = new Usuario();
-        [Route("Listar")]
+        [Route("PaginaCadastro")]
         public IActionResult Index(){
             return View();
         }
@@ -26,7 +26,7 @@ namespace Projeto_InstaDev.Controllers
 
             UsuarioModel.Criar(Novousuario);
 
-            return LocalRedirect("~/Usuario/Listar");
+            return LocalRedirect("~/Usuario/PaginaCadastro");
         }
     }
 }
