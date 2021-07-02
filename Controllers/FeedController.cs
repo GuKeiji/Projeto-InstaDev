@@ -46,9 +46,6 @@ namespace ProjetoInstaDev.Controllers
             postPai.Criar(novoPost);
             ViewBag.Posts = postPai.ListarFeed();
 
-
-
-
             return LocalRedirect("~/Feed/Listar");
         }
 
