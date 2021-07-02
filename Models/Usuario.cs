@@ -11,7 +11,7 @@ namespace ProjetoInstaDev.Models
         public string Nome { get; set; }
         private int Id;
         public string Email { get; set; }
-        private string Senha;
+        public string Senha;
         public string UserName { get; set;}
         public string ImagemUsuario { get; set;}
 

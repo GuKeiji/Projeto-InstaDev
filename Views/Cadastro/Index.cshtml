@@ -1,0 +1,50 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Cadastro";
+}
+<div class="conteiner_Cadastro">
+    <div class="form_Cadastro">
+        <div class="cont_logo_Cadastro">
+            <img src="~/ImagensCadastro/Instadev@2x.png" alt="">
+            <p>Cadstre-se para ver fotos e vídeos dos seus amigos</video></p>
+        </div>
+
+        <form method="POST" action='@Url.Action("Cadastrar")' enctype="multipart/form-data">
+            <div class="input_Cadastro">
+                <input type="text" placeholder="Email" name="Email">
+            </div>
+            <div class="input_Cadastro">
+                <input type="text" placeholder="Nome completo" name="Nome">
+            </div>
+            <div class="input_Cadastro">
+                <input type="text" placeholder="Nome de usuário" name="UserName">
+            </div>
+            <div class="input_Cadastro">
+                <input type="password" placeholder="Senha" name="Senha">
+            </div>
+
+            <div class="buntton_Cadastro">
+                <button type="submit">Cadastre-se</button>
+            </div>
+        </form>
+
+        <div class="Cadastrar_p">
+            <p>Ao se cadastrar, você concorda com nossos Termos, Política de Dados e Política de Cookies.</p>
+        </div>
+    </div>
+
+    <div class="Conecte_Cadastrar">
+        <div class="organizar_Cadastrar">
+            <span>Tem uma conta?</span><a href="">Conecte-se</a>
+        </div>
+    </div>
+    <div class="outroapp_cont_Cadastro">
+        <div class="outroapp_Cadastro">
+            <span>Obtenha o aplicativo</span>
+            <div>
+                <a href=""><img src="~/ImagensCadastro/app_store 1.png" alt=""></a>
+                <a href=""><img src="~/ImagensCadastro/google_play 1.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+</div>
