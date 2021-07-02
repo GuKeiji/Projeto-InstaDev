@@ -30,9 +30,17 @@ namespace ProjetoInstaDev.Models
             CriarPastaEArquivo(CAMINHO);
         }
 
+        public int PegarId(){
+            return this.Id;
+        }
+        public int SetarId(int _id)
+        {
+            this.Id = _id;
+            return this.Id;
+        }
         public string Preparar(Post p)
         {
-            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName}";
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName};{p.EnviadoPor.ImagemUsuario}";
         }
 
         public void Criar(Post p)
@@ -57,6 +65,7 @@ namespace ProjetoInstaDev.Models
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
                 post.EnviadoPor.UserName = linha[3];
+                post.EnviadoPor.ImagemUsuario = linha[4];
                 posts.Add(post); 
             }
             return posts;
@@ -81,6 +90,7 @@ namespace ProjetoInstaDev.Models
                     post.Legenda = linha[1];
                     post.Imagem = linha[2];
                     post.EnviadoPor.UserName = linha[3];
+                    post.EnviadoPor.ImagemUsuario = linha[4];
                     PostsPerfil.Add(post);
                 }
 
