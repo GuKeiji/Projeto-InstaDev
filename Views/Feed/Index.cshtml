@@ -57,9 +57,9 @@
         {
             <article class="feed_post">
                 <div class="feed_post_header">
-                    <img class="feed_imagem_perfil_post" src="imagens/batatinha.jpg">
+                    <img class="feed_imagem_perfil_post" src="@p.EnviadoPor.ImagemUsuario">
                     <div class="feed_post_header_organizar">
-                        <span class="feed_nome_logado">@p.EnviadoPor</span>
+                        <span class="feed_nome_logado">@p.EnviadoPor.UserName</span>
                         <span class="feed_local_post">@p.Legenda</span>
                     </div>
                 </div>
@@ -90,7 +90,8 @@
     <aside>
         <div class="feed_usuario_logado">
             <a href="#">
-                <img class="feed_imagem_perfil_logado" src="imagens/Thomas_lindao.jpg">
+                @* Arrumar foto de perfil logado *@
+                <img class="feed_imagem_perfil_logado" src="~/imagens/Thomas_lindao.jpg">
             </a>
             <div class="feed_organizar_perfil_logado">
                 <span class="feed_nome">@ViewBag.UserName</span>

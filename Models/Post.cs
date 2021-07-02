@@ -40,7 +40,7 @@ namespace ProjetoInstaDev.Models
         }
         public string Preparar(Post p)
         {
-            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName}";
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.EnviadoPor.UserName};{p.EnviadoPor.ImagemUsuario}";
         }
 
         public void Criar(Post p)
@@ -65,6 +65,7 @@ namespace ProjetoInstaDev.Models
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
                 post.EnviadoPor.UserName = linha[3];
+                post.EnviadoPor.ImagemUsuario = linha [4];
                 posts.Add(post); 
             }
             return posts;
