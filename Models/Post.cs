@@ -69,7 +69,7 @@ namespace ProjetoInstaDev.Models
             return posts;
         }
 
-        public List<Post> ListarPerfil(int id)
+        public List<Post> ListarPerfil(Usuario UserName)
         {
             throw new System.NotImplementedException();
         }
