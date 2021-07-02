@@ -4,12 +4,29 @@
     box-sizing: 0;
 }
 
+.perfil_btn_publi_c i{
+    font-size:  1.6vw;
+    color: #000000;
+}
+
+.perfil_btn_publi_c i:hover{
+    color: #2686CC;
+}
+
+.perfil_btn_publi i{
+    font-size:  1.6vw;
+    color: #000000;
+}
+
+.perfil_btn_publi i:hover{
+    color: #ff0000;
+}
+
 .feed_container{
     display: flex;
     justify-content: center;
     background-color: #fafafa;
     width: 100%;
-    height: 1143px;
 }
 
 .feed_container_posts{
@@ -17,7 +34,6 @@
     flex-direction: column;
     justify-content: space-around;
     width: 610px;
-    height: 1000px;
 }
 
 .feed_container_usuarios{
@@ -28,6 +44,7 @@
     width: 610px;
     height: 113px;
     border: 1px solid #F1F1F1;
+    margin: 5% 0 7% 0;
 }
 
 .feed_perfis{
@@ -63,6 +80,7 @@
     width: 610px;
     height: 166px;
     border: 1px solid #F1F1F1;
+    margin-bottom: 7%;
 }
 
 .feed_postar span{
@@ -140,6 +158,7 @@
     width: 610px;
     height: 610px;
     border: 1px solid #F1F1F1;
+    margin-bottom: 7%;
 }
 
 .feed_post_header{

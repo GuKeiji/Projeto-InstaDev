@@ -38,6 +38,7 @@
         <form class="feed_postar" method="POST" action='@Url.Action("CadastrarPost")' enctype="multipart/form-data">
             <div class="feed_organizar_form">
                 <div class="feed_organizar_postar">
+                    @* Arrumar foto de perfil logado *@
                     <img src="/imagens/Thomas_lindao.jpg" class="feed_imagem_logado">
                     <span>Postar</span>
                 </div>
@@ -64,7 +65,7 @@
                     </div>
                 </div>
                 <div>
-                    <img class="feed_imagem_post" src="imagens/prainha.jpg">
+                    <img class="feed_imagem_post" src="~/imgpost/Post/@p.Imagem">
                 </div>
                 <div class="feed_post_interacoes">
                     <div class="feed_post_organizar_interacoes">
