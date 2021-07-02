@@ -8,6 +8,7 @@ namespace Projeto_InstaDev.Controllers
     [Route("Usuario")]
     public class CadastroController : Controller
     {
+
         Usuario UsuarioModel = new Usuario();
         [Route("PaginaCadastro")]
         public IActionResult Index(){
@@ -16,12 +17,11 @@ namespace Projeto_InstaDev.Controllers
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form){
             Usuario Novousuario = new Usuario();
-            // var Nu = Novousuario.PegarSenha();
-            
+
             Novousuario.Nome = form["Nome"];
             Novousuario.SetarId(Novousuario.GerarId(Novousuario.PegarId()));
             Novousuario.Email = form["Email"];
-            Novousuario.Senha = form["Senha"];
+            Novousuario.PegarSenha(form["Senha"]);
             Novousuario.UserName = form["UserName"];
 
             UsuarioModel.Criar(Novousuario);

@@ -11,7 +11,7 @@ namespace ProjetoInstaDev.Models
         public string Nome { get; set; }
         private int Id;
         public string Email { get; set; }
-        public string Senha;
+        private string Senha;
         public string UserName { get; set;}
         public string ImagemUsuario { get; set;}
 
@@ -19,8 +19,9 @@ namespace ProjetoInstaDev.Models
         public Usuario(){
             CriarPastaEArquivo(CAMINHO);
         }
-        public string PegarSenha(){
-            return this.Senha;
+
+        public void PegarSenha(string _Senha){
+            Senha = _Senha;
         }
         public string SetarSenha(string _senha){
             this.Senha = _senha;
