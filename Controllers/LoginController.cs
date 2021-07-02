@@ -5,6 +5,7 @@ using ProjetoInstaDev.Models;
 
 namespace Projeto_InstaDev.Controllers
 {
+    [Route ("Login")]
     public class Login : Controller
     {
         [TempData]
