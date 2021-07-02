@@ -1,5 +1,4 @@
-@model Usuario
-
+@model Post
 @{
     ViewData["Title"] = "Feed";
 }
@@ -56,7 +55,7 @@
         </form>
         @foreach (Post p in ViewBag.Posts)
         {
-            <div class="feed_post">
+            <article class="feed_post">
                 <div class="feed_post_header">
                     <img class="feed_imagem_perfil_post" src="imagens/batatinha.jpg">
                     <div class="feed_post_header_organizar">
@@ -85,12 +84,14 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
+            </article>
         }
     </div>
     <aside>
         <div class="feed_usuario_logado">
-            <img class="feed_imagem_perfil_logado" src="imagens/Thomas_lindao.jpg">
+            <a href="#">
+                <img class="feed_imagem_perfil_logado" src="imagens/Thomas_lindao.jpg">
+            </a>
             <div class="feed_organizar_perfil_logado">
                 <span class="feed_nome">@ViewBag.UserName</span>
                 <span class="feed_nome_real">Thomas</span>

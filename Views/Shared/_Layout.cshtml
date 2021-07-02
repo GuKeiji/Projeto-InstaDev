@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - ProjetoInstaDev</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/perfil_estilo.css" />
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/styleFeed.css" />
 </head>
 <body>
     <header>
@@ -25,17 +25,15 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li><a asp-area="" asp-controller="Perfil" asp-action="Index">Perfil</a></li>
+                        <li><a asp-area="" asp-controller="Feed" asp-action="Index">Feed</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
-    </div>
-
     <footer>
         <section class="perfil_footer_sec">
             <ul class="links_úteis">
