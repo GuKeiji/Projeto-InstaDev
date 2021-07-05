@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -5,6 +6,7 @@ namespace ProjetoInstaDev.Models
 {
     public class Instadev_Base
     {
+        Random random = new Random();
         public void CriarPastaEArquivo(string _caminho)
         {
             string folder = _caminho.Split("/")[0];
@@ -44,9 +46,18 @@ namespace ProjetoInstaDev.Models
                 }
             }
         }
-        public int GerarId(int id)
+        public int GerarId(List<int> ListaDeId)
         {
-            return id++;
+            int id;
+            do
+            {
+                id = random.Next(1,1000000000);
+                if (!ListaDeId.Contains(id))
+                {
+                    return id;
+                }
+            } while (ListaDeId.Contains(id));
+            return id;
         }
     }
 }

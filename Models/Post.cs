@@ -31,12 +31,19 @@ namespace ProjetoInstaDev.Models
         }
 
         public int PegarId(){
-            return this.Id;
+            return Id;
         }
-        public int SetarId(int _id)
+        public List<int> RetornarIds() {
+            List<int> Ids = new List<int>();
+            foreach (var item in ListarFeed())
+            {
+                Ids.Add(item.Id);
+            }
+            return Ids;
+        }
+        public void SetarId()
         {
-            this.Id = _id;
-            return this.Id;
+            Id = GerarId(RetornarIds());
         }
         public string Preparar(Post p)
         {
