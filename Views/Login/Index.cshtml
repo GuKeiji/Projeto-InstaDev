@@ -1,3 +1,8 @@
+@model Usuario
+@{
+    ViewData["Title"] = "Login";
+}
+
 <section class="login">
     <div class="login_principal login_space_btw ">
         <div class="login_imagem">
@@ -9,7 +14,7 @@
             <input class="login_input_login2" type="password" name="senha" placeholder="Senha" id="input_senha">
         </div>
         <div class="login_btn">
-            <button class="login_btn_banner ">Entrar</button></a>
+            <button type="submit" asp-area="" asp-controller="Feed" asp-action="Index" class="login_btn_banner ">Entrar</button></a>
         </div>
 
         <div class="login_hr">
@@ -25,7 +30,7 @@
 
     </div>
     <div class="login_novo">
-        <p class="login_cadastre_se">Não tem uma conta?<a href="#">Cadastre-se</a></p>
+        <p class="login_cadastre_se">Não tem uma conta?<a asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastre-se</a></p>
     </div>
     <div class="login_espaco">
         <p class="login_app">Obtenha o aplicativo</p>

@@ -23,6 +23,7 @@ namespace Projeto_InstaDev.Controllers
             Novousuario.Email = form["Email"];
             Novousuario.PegarSenha(form["Senha"]);
             Novousuario.UserName = form["UserName"];
+            Novousuario.SetarId();
 
             UsuarioModel.Criar(Novousuario);
 
