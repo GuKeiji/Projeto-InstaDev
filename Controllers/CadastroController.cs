@@ -27,7 +27,7 @@ namespace Projeto_InstaDev.Controllers
 
             UsuarioModel.Criar(Novousuario);
 
-            return LocalRedirect("~/Usuario/PaginaCadastro");
+            return LocalRedirect("~/Login/Listar");
         }
     }
 }

@@ -1,7 +1,6 @@
-@model Usuario
-
+@model Post
 @{
-   ViewData["Title"] = "Feed"; 
+    ViewData["Title"] = "Feed";
 }
 
 <section class="feed_container">
@@ -39,55 +38,75 @@
         <form class="feed_postar" method="POST" action='@Url.Action("CadastrarPost")' enctype="multipart/form-data">
             <div class="feed_organizar_form">
                 <div class="feed_organizar_postar">
+                    @* Arrumar foto de perfil logado *@
                     <img src="/imagens/Thomas_lindao.jpg" class="feed_imagem_logado">
                     <span>Postar</span>
                 </div>
                 <div class="feed_postar_inputs">
-                    <input class="feed_inputs" type="text" placeholder="Digite a descrição da postagem..." name="Legenda">
+                    <input class="feed_inputs" type="text" placeholder="Digite a descrição da postagem..."
+                        name="Legenda">
+
                     <label for="file">Escolha a imagem</label>
-                    <input id="file" name="ImagemPost" class="feed_input_file" type="file">
-                    <button class="feed_btn_publicar">Postar</button>
+
+                    <input id="file" name="Imagem" class="feed_input_file" type="file">
+
+                    <button class="feed_btn_publicar" type="submit">Postar</button>
                 </div>
             </div>
         </form>
-        <div class="feed_post">
-            <div class="feed_post_header">
-                <img class="feed_imagem_perfil_post" src="imagens/batatinha.jpg">
-                <div class="feed_post_header_organizar">
-                    <span class="feed_nome_logado">batatinha</span>
-                    <span class="feed_local_post">Prainha, RJ</span>
-                </div>
-            </div>
-            <div>
-                <img class="feed_imagem_post" src="imagens/prainha.jpg">
-            </div>
-            <div class="feed_post_interacoes">
-                <div class="feed_post_organizar_interacoes">
-                    <img src="imagens/Vector.png" alt="Curtir">
-                    <img src="imagens/balaozinho.png" alt="Comentários">
-                    <div>
-                        <input class="feed_post_comentar" type="text" placeholder="Comentar...">
+        @if (ViewBag.Posts != null)
+        {
+            @foreach (Post p in ViewBag.Posts)
+            {
+                <article class="feed_post">
+                    <div class="feed_post_header">
+                        <img class="feed_imagem_perfil_post" src="@p.EnviadoPor">
+                        <div class="feed_post_header_organizar">
+                            <span class="feed_nome_logado">@p.EnviadoPor</span>
+                            <span class="feed_local_post">@p.Legenda</span>
+                        </div>
                     </div>
-                </div>
-                <span>100 curtidas</span>
-                <table class="feed_table">
-                    <tbody>
-                        <tr>
-                            <td class="feed_comentario_perfil">tia_Cláudia</td>
-                            <td class="feed_comentario">Amor da Titia S2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                    <div>
+                        <img class="feed_imagem_post" src="~/imgpost/Post/@p.Imagem">
+                    </div>
+                    <div class="feed_post_interacoes">
+                        <div class="feed_post_organizar_interacoes">
+                            <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                            <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
+                            <div>
+                                <input class="feed_post_comentar" type="text" placeholder="Comentar...">
+                            </div>
+                        </div>
+                        <span>100 curtidas</span>
+                        <table class="feed_table">
+                            <tbody>
+                                <tr>
+                                    <td class="feed_comentario_perfil">tia_Cláudia</td>
+                                    <td class="feed_comentario">Amor da Titia S2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            }
+        }
+        else
+        {
+            <span class="feed_post">
+                Todas as postagens aparecerão aqui
+            </span>
+        }
     </div>
-    <div>
-        <aside class="feed_usuario_logado">
-            <img class="feed_imagem_perfil_logado" src="imagens/Thomas_lindao.jpg">
+    <aside>
+        <div class="feed_usuario_logado">
+            <a asp-area="" asp-controller="Perfil" asp-action="Index">
+                @* Arrumar foto de perfil logado *@
+                <img class="feed_imagem_perfil_logado" src="~/imagens/Thomas_lindao.jpg">
+            </a>
             <div class="feed_organizar_perfil_logado">
                 <span class="feed_nome">@ViewBag.UserName</span>
-                <span class="feed_nome_real">Thomas</span>
+                <span class="feed_nome_real">@ViewBag.Nome</span>
             </div>
-        </aside>
-    </div>
+        </div>
+    </aside>
 </section>
