@@ -7,15 +7,15 @@ namespace ProjetoInstaDev.Models
 {
     public class Post : Instadev_Base, IPost
     {
-        public Post(int id, string legenda, string imagem, Usuario enviadoPor) 
+        public Post(int id, string legenda, string imagem, Usuario enviadoPor)
         {
             this.Id = id;
-                this.Legenda = legenda;
-                this.Imagem = imagem;
-                this.EnviadoPor = enviadoPor;
-               
+            this.Legenda = legenda;
+            this.Imagem = imagem;
+            this.EnviadoPor = enviadoPor;
+
         }
-                private int Id { get; set; }
+        private int Id { get; set; }
 
         public string Legenda { get; set; }
 
@@ -30,10 +30,12 @@ namespace ProjetoInstaDev.Models
             CriarPastaEArquivo(CAMINHO);
         }
 
-        public int PegarId(){
+        public int PegarId()
+        {
             return Id;
         }
-        public List<int> RetornarIds() {
+        public List<int> RetornarIds()
+        {
             List<int> Ids = new List<int>();
             foreach (var item in ListarFeed())
             {
@@ -67,42 +69,46 @@ namespace ProjetoInstaDev.Models
                 string[] linha = item.Split(";");
 
                 Post post = new Post();
-                
+
                 post.Id = Int32.Parse(linha[0]);
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
-                posts.Add(post); 
+                posts.Add(post);
             }
             return posts;
         }
 
-        public List<Post> ListarPerfil(Usuario UserName)
+        public List<Post> ListarPerfil(Usuario Logado)
         {
             List<Post> PostsPerfil = new List<Post>();
 
             string[] linhas = File.ReadAllLines(CAMINHO);
             foreach (var item in linhas)
             {
-                
-                string[] linha = item.Split(";");
-                
-                if (UserName.ToString() == linha[3])
-                {
-                 
-                    Post post = new Post();
 
-                    post.Id = Int32.Parse(linha[0]);
-                    post.Legenda = linha[1];
-                    post.Imagem = linha[2];
-                    post.EnviadoPor.UserName = linha[3];
-                    post.EnviadoPor.ImagemUsuario = linha[4];
-                    PostsPerfil.Add(post);
+                string[] linha = item.Split(";");
+
+                if (linha[3] != null)
+                {
+
+                    if (Logado.ToString() == linha[3])
+                    {
+                        Post post = new Post();
+
+                        post.Id = Int32.Parse(linha[0]);
+                        post.Legenda = linha[1];
+                        post.Imagem = linha[2];
+                        post.EnviadoPor.UserName = linha[3];
+                        post.EnviadoPor.ImagemUsuario = linha[4];
+                        PostsPerfil.Add(post);
+                    }
                 }
 
-            } 
+
+            }
             return PostsPerfil;
         }
 
-        
+
     }
 }

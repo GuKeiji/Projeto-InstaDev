@@ -27,13 +27,13 @@ namespace Projeto_InstaDev.Controllers
 
             var logado = UsuarioCSV.Find(
                 x =>
-                x.Split(";")[3] == form["Email"] &&
-                x.Split(";")[4] == form["Senha"]
+                x.Split(";")[2] == form["Email"] &&
+                x.Split(";")[3] == form["Senha"]
             );
 
             if (logado != null)
             {
-                HttpContext.Session.SetString("_username", logado.Split(";")[1]);
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[4]);
                 return LocalRedirect("~/");
             }
             else

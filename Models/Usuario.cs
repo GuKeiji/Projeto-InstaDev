@@ -27,8 +27,8 @@ namespace ProjetoInstaDev.Models
             this.Senha = _senha;
             return this.Senha;
         }
-        public int PegarId(){
-            return this.Id;
+        public void PegarId(int _id){
+            Id = _id;
         }
         public List<int> RetornarIds() {
             List<int> Ids = new List<int>();
