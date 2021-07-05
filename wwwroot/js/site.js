@@ -1,4 +1,5 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿var like = document.getElementById("like")
 
-// Write your JavaScript code.
+function btnLike() {
+    like.style.color = "Red";
+}

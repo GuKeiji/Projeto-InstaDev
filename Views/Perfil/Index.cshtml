@@ -1,5 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+@model Usuario
+
+@{
+    ViewData["Title"] = "Perfil";
+}
 
 <head>
     <meta charset="UTF-8">
@@ -49,7 +52,7 @@
                                 </div>
                             </div>
                             <div class="perfil_like_e_coment">
-                                <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                                <a class="perfil_btn_publi" href="#"><i id="like" class="far fa-heart" aria-hidden="true" onclick="btnLike()"></i></a>
                                 <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
                             </div>
                             <span class="perfil_num_like">1954 curtidas</span>
