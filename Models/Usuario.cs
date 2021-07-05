@@ -19,8 +19,9 @@ namespace ProjetoInstaDev.Models
         public Usuario(){
             CriarPastaEArquivo(CAMINHO);
         }
-        public string PegarSenha(){
-            return this.Senha;
+
+        public void PegarSenha(string _Senha){
+            Senha = _Senha;
         }
         public string SetarSenha(string _senha){
             this.Senha = _senha;
@@ -54,7 +55,7 @@ namespace ProjetoInstaDev.Models
             ReescrevaCSV(CAMINHO, linhas);
         }
 
-        public List<Usuario> ListarDados()
+        public List<Usuario> LerDados()
         {
             List<Usuario> usuario = new List<Usuario>();
 

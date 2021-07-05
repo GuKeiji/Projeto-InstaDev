@@ -78,7 +78,29 @@ namespace ProjetoInstaDev.Models
 
         public List<Post> ListarPerfil(Usuario UserName)
         {
-            throw new System.NotImplementedException();
+            List<Post> PostsPerfil = new List<Post>();
+
+            string[] linhas = File.ReadAllLines(CAMINHO);
+            foreach (var item in linhas)
+            {
+                
+                string[] linha = item.Split(";");
+                
+                if (UserName.ToString() == linha[3])
+                {
+                 
+                    Post post = new Post();
+
+                    post.Id = Int32.Parse(linha[0]);
+                    post.Legenda = linha[1];
+                    post.Imagem = linha[2];
+                    post.EnviadoPor.UserName = linha[3];
+                    post.EnviadoPor.ImagemUsuario = linha[4];
+                    PostsPerfil.Add(post);
+                }
+
+            } 
+            return PostsPerfil;
         }
 
         
