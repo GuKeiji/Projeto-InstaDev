@@ -71,7 +71,7 @@ header{
     background: #2686CC;
     border-radius: 2px;
     color: white;
-    border: white;
+    border-bottom: white;
 }
 .login_email{
     display: flex;
