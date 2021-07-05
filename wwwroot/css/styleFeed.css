@@ -151,6 +151,14 @@
     border: #ffffff;
 }
 
+.feed_btn_publicar:hover{
+    background-color:#2660cc;
+    color: #ffffff;
+    width: 140px;
+    border-radius: 5px;
+    border: #ffffff;
+}
+
 .feed_post{
     /* display: flex; */
     /* flex-direction: column; */

@@ -267,3 +267,14 @@ a{
 footer{
     height: 293px;
 }
+
+.btn_refeito{
+    width: 267px;
+    height: 30px;
+    background-color: #2686CC;
+    border-radius: 2px;
+    border: none;
+    color: #ffff;
+    padding: 5px;
+    margin-top: 17px;
+}
