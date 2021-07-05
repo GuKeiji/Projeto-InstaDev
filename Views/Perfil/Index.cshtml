@@ -44,12 +44,12 @@
                             <div class="perfil_foto_e_local">
                                 <img class="perfil_foto_perfil" src="/img/padrao.png" alt="Foto de perfil">
                                 <div class="perfil_nome_e_local">
-                                    <a>@item.Nome</a>
+                                    <a>@ViewBag.Nome</a>
                                     <span>Rio de Janeiro, Brazil</span>
                                 </div>
                             </div>
                             <div class="perfil_like_e_coment">
-                                <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                                <a class="perfil_btn_publi" href="#"><i id="like" class="far fa-heart" aria-hidden="true" onclick="btnLike()"></i></a>
                                 <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
                             </div>
                             <span class="perfil_num_like">1954 curtidas</span>
@@ -95,12 +95,6 @@
                                 <button href="#" type="submit">Ver todos os 543 comentários</button>
                             </div>
                         </section>
-                        @if (item.Imagem < 1)
-                        {
-                            <div>
-                                <p>Suas publicações aparecerão aqui</p>
-                            </div>
-                        }
 
                     </div>
                 </article>
