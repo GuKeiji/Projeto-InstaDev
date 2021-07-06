@@ -14,7 +14,9 @@ namespace Projeto_InstaDev.Controllers
         public IActionResult Index()
         {
             ViewBag.Usuarios = usuarioModel.LerDados();
-            ViewBag.Posts = postModel.ListarPerfil(usuarioModel);
+            ViewBag.UserName = HttpContext.Session.GetString("_username");
+            ViewBag.Nome = HttpContext.Session.GetString("_Nome");
+            ViewBag.Post = postModel.ListarPerfil(usuarioModel);
             return View();
         }
 
