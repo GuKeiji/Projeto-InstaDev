@@ -13,10 +13,12 @@
                 <input class="login_input_login1" type="email" name="Email" placeholder="E-mail" id="input_email">
                 <input class="login_input_login2" type="password" name="Senha" placeholder="Senha" id="input_senha">
             </div>
-        <div class="error">@TempData.Peek("MensagemErro")</div>
-        <div class="login_btn">
-            <button type="submit" class="btn_refeito">Entrar</button>
-        </div>
+            <div class="error">
+                <span>@TempData.Peek("MensagemErro")</span>
+            </div>
+            <div class="login_btn">
+                <button type="submit" class="btn_refeito">Entrar</button>
+            </div>
         </form>
         <div class="login_hr">
             <hr class="login_hr1">

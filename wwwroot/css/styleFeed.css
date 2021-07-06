@@ -217,6 +217,7 @@
 .feed_imagem_post{
     height: 343px;
     width: 610px;
+    object-fit: cover;
 }
 
 .feed_post_interacoes{

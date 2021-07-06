@@ -278,3 +278,14 @@ footer{
     padding: 5px;
     margin-top: 17px;
 }
+
+.error{
+    margin-top: 10px;
+    text-align: center;
+    color: red;
+}
+
+.error span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border: 2px solid magenta; */
+}

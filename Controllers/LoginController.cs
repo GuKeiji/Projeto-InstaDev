@@ -40,7 +40,7 @@ namespace Projeto_InstaDev.Controllers
             // else
             // {
                 MensagemErro = "Dados incorretos tente novamente !";
-                return LocalRedirect("~/Login/Listar");
+                return LocalRedirect("~/");
             // }
         }
         [Route("Logout")]
