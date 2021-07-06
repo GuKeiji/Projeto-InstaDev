@@ -9,14 +9,19 @@ namespace ProjetoInstaDev.Controllers
     public class FeedController : Controller
     {
         Post postPai = new Post();
+        Usuario UsuarioPai = new Usuario();
         [Route("Listar")]
         public IActionResult Index()
         {
             ViewBag.Posts = postPai.ListarFeed();
+            ViewBag.Usuarios = UsuarioPai.LerDados();
+            ViewBag.UserName = HttpContext.Session.GetString("_username");
             return View();
         }
         [Route("Cadastrar")]
         public IActionResult CadastrarPost(IFormCollection form){
+            ViewBag.Usuarios = UsuarioPai.LerDados();
+            ViewBag.UserName = HttpContext.Session.GetString("_username");
             Post novoPost = new Post();
             novoPost.SetarId();
             novoPost.Legenda = form["Legenda"];
