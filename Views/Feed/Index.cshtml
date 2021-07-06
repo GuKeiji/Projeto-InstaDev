@@ -55,6 +55,9 @@
                 </div>
             </div>
         </form>
+        @* @if (ViewBag.Posts == null)
+            {
+            } *@
         @if (ViewBag.Posts != null)
         {
             @foreach (Post p in ViewBag.Posts)
@@ -63,7 +66,7 @@
                     <div class="feed_post_header">
                         <img class="feed_imagem_perfil_post" src="@p.EnviadoPor">
                         <div class="feed_post_header_organizar">
-                            <span class="feed_nome_logado">@p.EnviadoPor</span>
+                            <span class="feed_nome_logado">@p.nomeEnviado</span>
                             <span class="feed_local_post">@p.Legenda</span>
                         </div>
                     </div>
@@ -93,8 +96,7 @@
         }
         else
         {
-            @* Span não aparece *@
-            <span class="feed_post">
+            <span class="feed_mensagem_inicio">
                 Todas as postagens aparecerão aqui
             </span>
         }

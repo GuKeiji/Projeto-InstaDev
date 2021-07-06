@@ -13,9 +13,10 @@ namespace Projeto_InstaDev.Controllers
         [Route("Listar")]
         public IActionResult Index()
         {
-            ViewBag.UserName = HttpContext.Session.GetString("_userName");
             ViewBag.Usuarios = usuarioModel.LerDados();
-            ViewBag.Posts = postModel.ListarPerfil(ViewBag.UserName);
+            ViewBag.UserName = HttpContext.Session.GetString("_username");
+            ViewBag.Nome = HttpContext.Session.GetString("_Nome");
+            ViewBag.Post = postModel.ListarPerfil(HttpContext.Session.GetString("_username"));
             return View();
         }
 

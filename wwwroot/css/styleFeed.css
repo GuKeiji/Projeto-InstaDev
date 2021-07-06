@@ -159,6 +159,19 @@
     border: #ffffff;
 }
 
+.feed_mensagem_inicio{
+    /* background-color: #ffffff; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 610px;
+    height: 160px;
+    /* border: 1px solid #F1F1F1; */
+    margin-bottom: 7%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #B6B6B6;
+}
+
 .feed_post{
     /* display: flex; */
     /* flex-direction: column; */

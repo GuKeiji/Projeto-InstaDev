@@ -33,14 +33,15 @@ namespace Projeto_InstaDev.Controllers
 
             if (logado != null)
             {
-                HttpContext.Session.SetString("_userName", logado.Split(";")[4]);
+                HttpContext.Session.SetString("_username", logado.Split(";")[4]);
+                HttpContext.Session.SetString("_Nome", logado.Split(";")[0]);
                 return LocalRedirect("~/Feed/Listar");
             }
-            else
-            {
+            // else
+            // {
                 MensagemErro = "Dados incorretos tente novamente !";
                 return LocalRedirect("~/Login/Listar");
-            }
+            // }
         }
         [Route("Logout")]
 

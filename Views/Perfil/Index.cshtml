@@ -4,7 +4,7 @@
     ViewData["Title"] = "Perfil";
 }
 
-<main>
+<div class="perfil_grid">
     <section class="perfil_container perfil_publi_info">
         <img class="perfil_fto_principal" src="/img/padrao.png" alt="Foto de perfil">
         <section class="perfil_informacoes">
@@ -28,16 +28,16 @@
             <img src="/img/image 1.png">
             <span>publicações</span>
         </div>
-        @foreach (var item in ViewBag.Usuarios)
+        @foreach (Post item in ViewBag.Post)
         {
             <article class="perfil_post">
                 <div class="perfil_box_conteudo">
-                    <img class="perfil_img_publi" src="/img/Rectangle 4.png" alt="Imagem publicada">
+                    <img class="perfil_img_publi" src='~/imgpost/Post/@item.Imagem' alt="Imagem publicada">
                     <section class="perfil_sec_coments">
                         <div class="perfil_foto_e_local">
-                            <img class="perfil_foto_perfil" src="/img/padrao.png" alt="Foto de perfil">
+                            <img class="perfil_foto_perfil" src="~/imgpost/Post/@item.nomeEnviado" alt="Foto de perfil">
                             <div class="perfil_nome_e_local">
-                                <a>@item.Nome</a>
+                                <a>@item.nomeEnviado</a>
                                 <span>Rio de Janeiro, Brazil</span>
                             </div>
                         </div>
@@ -91,4 +91,4 @@
         }
     </section>
 
-</main>
+</div>
