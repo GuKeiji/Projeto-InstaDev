@@ -113,6 +113,7 @@
 }
 
 .perfil_img_publi{
+    object-fit: cover;
     width: 430px;
     height: 430px;
 }
