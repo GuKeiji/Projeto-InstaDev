@@ -105,6 +105,19 @@
     text-transform: uppercase;
 }
 
+.perfil_mensagem_inicio{
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 610px;
+    height: 160px;
+    margin-bottom: 7%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
 .perfil_box_conteudo{
     display: flex;
     background-color: #ffff;

@@ -28,66 +28,73 @@
             <img src="/img/image 1.png">
             <span>publicações</span>
         </div>
-        @foreach (Post item in ViewBag.Post)
+        @if (ViewBag.Post.Count == 0)
         {
-            <article class="perfil_post">
-                <div class="perfil_box_conteudo">
-                    <img class="perfil_img_publi" src='~/imgpost/Post/@item.Imagem' alt="Imagem publicada">
-                    <section class="perfil_sec_coments">
-                        <div class="perfil_foto_e_local">
-                            <img class="perfil_foto_perfil" src="~/imgpost/Post/@item.nomeEnviado" alt="Foto de perfil">
-                            <div class="perfil_nome_e_local">
-                                <a>@item.nomeEnviado</a>
-                                <span>Rio de Janeiro, Brazil</span>
+            <span class="perfil_mensagem_inicio">suas publicações aparecerão aqui</span>
+        }
+        else
+        {
+            @foreach (Post item in ViewBag.Post)
+            {
+                <article class="perfil_post">
+                    <div class="perfil_box_conteudo">
+                        <img class="perfil_img_publi" src='~/imgpost/Post/@item.Imagem' alt="Imagem publicada">
+                        <section class="perfil_sec_coments">
+                            <div class="perfil_foto_e_local">
+                                <img class="perfil_foto_perfil" src="~/imgpost/Post/@item.nomeEnviado" alt="Foto de perfil">
+                                <div class="perfil_nome_e_local">
+                                    <a>@item.nomeEnviado</a>
+                                    <span>Rio de Janeiro, Brazil</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="perfil_like_e_coment">
-                            <a class="perfil_btn_publi" href="#"><i id="like" class="far fa-heart" aria-hidden="true"
+                            <div class="perfil_like_e_coment">
+                                <a class="perfil_btn_publi" href="#"><i id="like" class="far fa-heart" aria-hidden="true"
                                 onclick="btnLike()"></i></a>
-                            <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
-                        </div>
-                        <span class="perfil_num_like">1954 curtidas</span>
-
-                        <div class="perfil_coment">
-                            <div class="perfil_coment_resp">
-                                <a><span>Fausto_silva:</span></a>
-                                <p>Esse cara é fera bixo!!!</p>
+                                <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
                             </div>
-                            <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
-                        </div>
+                            <span class="perfil_num_like">1954 curtidas</span>
 
-                        <div class="perfil_coment">
-                            <div class="perfil_coment_resp">
-                                <a><span>yes_baby:</span></a>
-                                <p>thank you</p>
+                            <div class="perfil_coment">
+                                <div class="perfil_coment_resp">
+                                    <a><span>Fausto_silva:</span></a>
+                                    <p>Esse cara é fera bixo!!!</p>
+                                </div>
+                                <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
                             </div>
 
-                            <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
-                        </div>
+                            <div class="perfil_coment">
+                                <div class="perfil_coment_resp">
+                                    <a><span>yes_baby:</span></a>
+                                    <p>thank you</p>
+                                </div>
 
-                        <div class="perfil_coment">
-                            <div class="perfil_coment_resp">
-                                <a><span>adriano_stark:</span></a>
-                                <p>Quando eu adormecer, vou sonhar com você.</p>
+                                <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
                             </div>
-                            <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
-                        </div>
 
-                        <div class="perfil_coment">
-                            <div class="perfil_coment_resp">
-                                <a><span>yes_baby:</span></a>
-                                <p>Yes, baby!!</p>
+                            <div class="perfil_coment">
+                                <div class="perfil_coment_resp">
+                                    <a><span>adriano_stark:</span></a>
+                                    <p>Quando eu adormecer, vou sonhar com você.</p>
+                                </div>
+                                <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
                             </div>
-                            <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
-                        </div>
 
-                        <div>
-                            <button href="#" type="submit">Ver todos os 543 comentários</button>
-                        </div>
-                    </section>
+                            <div class="perfil_coment">
+                                <div class="perfil_coment_resp">
+                                    <a><span>yes_baby:</span></a>
+                                    <p>Yes, baby!!</p>
+                                </div>
+                                <a class="perfil_btn_publi_resp" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                            </div>
 
-                </div>
-            </article>
+                            <div>
+                                <button href="#" type="submit">Ver todos os 543 comentários</button>
+                            </div>
+                        </section>
+
+                    </div>
+                </article>
+            }
         }
     </section>
 
