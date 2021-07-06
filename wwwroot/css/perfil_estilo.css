@@ -226,11 +226,16 @@ footer{
     justify-content: center;
 }
 
+.footer_logo{
+    width: 150px;
+}
+
 .perfil_footer_sec{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .links_úteis{

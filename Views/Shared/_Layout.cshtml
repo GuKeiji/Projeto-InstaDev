@@ -30,6 +30,29 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+        @switch (ViewData["Title"])
+        {
+            case "Perfil":
+                <footer>
+                    <section class="perfil_footer_sec">
+                        <ul class="links_úteis">
+                            <span>Links úteis:</span>
+                            <li><a href="#">Regras de utilização</a></li>
+                            <li><a href="#">Suporte</a></li>
+                            <li><a href="#">Central de ajuda</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastre-se</a></li>
+                        </ul>
+                        <a asp-area="" asp-controller="Feed" asp-action="Index"><img class="footer_logo"
+                        src="~/ImagensCadastro/Instadev@2x.png" alt="Logo_Instadev"></a>
+                        <span>© 2021 INSTADEV DO SENAI INFO</span>
+                    </section>
+                </footer>
+                break;
+            default:
+                break;
+        }
+
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
