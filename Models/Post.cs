@@ -77,6 +77,7 @@ namespace ProjetoInstaDev.Models
                 post.nomeEnviado = linha[3];
                 posts.Add(post);
             }
+            posts.Reverse();
             return posts;
         }
 
@@ -101,7 +102,6 @@ namespace ProjetoInstaDev.Models
                         post.Legenda = linha[1];
                         post.Imagem = linha[2];
                         post.nomeEnviado = linha[3];
-                        // post.EnviadoPor.ImagemUsuario = linha[4];
                         PostsPerfil.Add(post);
                     }
                 }

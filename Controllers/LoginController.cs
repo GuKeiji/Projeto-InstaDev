@@ -5,7 +5,7 @@ using ProjetoInstaDev.Models;
 
 namespace Projeto_InstaDev.Controllers
 {
-    [Route ("Login")]
+    // [Route ("Login")]
     public class Login : Controller
     {
         [TempData]
@@ -13,7 +13,7 @@ namespace Projeto_InstaDev.Controllers
 
         Usuario UsuarioModel = new Usuario();
 
-        [Route("Listar")]
+        // [Route("Listar")]
         public IActionResult Index()
         {
             return View();
