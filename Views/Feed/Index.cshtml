@@ -55,51 +55,46 @@
                 </div>
             </div>
         </form>
-        @* @if (ViewBag.Posts == null)
-            {
-            } *@
-        @if (ViewBag.Posts != null)
-        {
-            @foreach (Post p in ViewBag.Posts)
-            {
-                <article class="feed_post">
-                    <div class="feed_post_header">
-                        <img class="feed_imagem_perfil_post" src="@p.EnviadoPor">
-                        <div class="feed_post_header_organizar">
-                            <span class="feed_nome_logado">@p.nomeEnviado</span>
-                            <span class="feed_local_post">@p.Legenda</span>
-                        </div>
-                    </div>
-                    <div>
-                        <img class="feed_imagem_post" src="~/imgpost/Post/@p.Imagem">
-                    </div>
-                    <div class="feed_post_interacoes">
-                        <div class="feed_post_organizar_interacoes">
-                            <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
-                            <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
-                            <div>
-                                <input class="feed_post_comentar" type="text" placeholder="Comentar...">
-                            </div>
-                        </div>
-                        <span>100 curtidas</span>
-                        <table class="feed_table">
-                            <tbody>
-                                <tr>
-                                    <td class="feed_comentario_perfil">tia_Cláudia</td>
-                                    <td class="feed_comentario">Amor da Titia S2</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </article>
-            }
-        }
-        else
+        @if (ViewBag.Posts.Count == 0)
         {
             <span class="feed_mensagem_inicio">
                 Todas as postagens aparecerão aqui
             </span>
         }
+        @foreach (Post p in ViewBag.Posts)
+        {
+            <article class="feed_post">
+                <div class="feed_post_header">
+                    <img class="feed_imagem_perfil_post" src="@p.EnviadoPor">
+                    <div class="feed_post_header_organizar">
+                        <span class="feed_nome_logado">@p.nomeEnviado</span>
+                        <span class="feed_local_post">@p.Legenda</span>
+                    </div>
+                </div>
+                <div>
+                    <img class="feed_imagem_post" src="~/imgpost/Post/@p.Imagem">
+                </div>
+                <div class="feed_post_interacoes">
+                    <div class="feed_post_organizar_interacoes">
+                        <a class="perfil_btn_publi" href="#"><i class="far fa-heart" aria-hidden="true"></i></a>
+                        <a class="perfil_btn_publi_c" href="#"><i class="far fa-comment" aria-hidden="true"></i></a>
+                        <div>
+                            <input class="feed_post_comentar" type="text" placeholder="Comentar...">
+                        </div>
+                    </div>
+                    <span>100 curtidas</span>
+                    <table class="feed_table">
+                        <tbody>
+                            <tr>
+                                <td class="feed_comentario_perfil">tia_Cláudia</td>
+                                <td class="feed_comentario">Amor da Titia S2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        }
+
     </div>
     <aside>
         <div class="feed_usuario_logado">
