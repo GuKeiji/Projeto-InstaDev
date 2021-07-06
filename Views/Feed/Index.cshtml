@@ -39,8 +39,8 @@
         <form class="feed_postar" method="POST" action='@Url.Action("CadastrarPost")' enctype="multipart/form-data">
             <div class="feed_organizar_form">
                 <div class="feed_organizar_postar">
-                    @* Arrumar foto de perfil logado *@
-                    <img src="/imagens/Thomas_lindao.jpg" class="feed_imagem_logado">
+                    @*foto de perfil logado *@
+                    <img src="/img/padrao.png" class="feed_imagem_logado">
                     <span>Postar</span>
                 </div>
                 <div class="feed_postar_inputs">
@@ -65,7 +65,7 @@
         {
             <article class="feed_post">
                 <div class="feed_post_header">
-                    <img class="feed_imagem_perfil_post" src="@p.EnviadoPor">
+                    <img class="feed_imagem_perfil_post" src="~/img/padrao.png">
                     <div class="feed_post_header_organizar">
                         <span class="feed_nome_logado">@p.nomeEnviado</span>
                         <span class="feed_local_post">@p.Legenda</span>
@@ -99,8 +99,8 @@
     <aside>
         <div class="feed_usuario_logado">
             <a asp-area="" asp-controller="Perfil" asp-action="Index">
-                @* Arrumar foto de perfil logado *@
-                <img class="feed_imagem_perfil_logado" src="~/imagens/Thomas_lindao.jpg">
+                @*foto de perfil logado *@
+                <img class="feed_imagem_perfil_logado" src="~/img/padrao.png">
             </a>
             <div class="feed_organizar_perfil_logado">
                 <span class="feed_nome">@ViewBag.UserName</span>
