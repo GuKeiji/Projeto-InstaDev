@@ -33,8 +33,8 @@ namespace Projeto_InstaDev.Controllers
 
             if (logado != null)
             {
-                HttpContext.Session.SetString("_UserName", logado.Split(";")[4]);
-                return LocalRedirect("~/");
+                HttpContext.Session.SetString("_username", logado.Split(";")[4]);
+                return LocalRedirect("~/Feed/Listar");
             }
             else
             {

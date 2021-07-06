@@ -48,7 +48,7 @@
 
                     <label for="file">Escolha a imagem</label>
 
-                    <input id="file" name="Imagem" class="feed_input_file" type="file">
+                    <input id="file" name="Imagem" required class="feed_input_file" type="file">
 
                     <button class="feed_btn_publicar" type="submit">Postar</button>
                 </div>
@@ -92,6 +92,7 @@
         }
         else
         {
+            @* Span não aparece *@
             <span class="feed_post">
                 Todas as postagens aparecerão aqui
             </span>
