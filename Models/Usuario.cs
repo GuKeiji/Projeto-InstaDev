@@ -12,25 +12,41 @@ namespace ProjetoInstaDev.Models
         private int Id;
         public string Email { get; set; }
         private string Senha;
-        public string UserName { get; set;}
-        public string ImagemUsuario { get; set;}
+        public string UserName { get; set; }
+        public string ImagemUsuario { get; set; }
 
         private const string CAMINHO = "Database/Usuario.csv";
-        public Usuario(){
+        public Usuario()
+        {
             CriarPastaEArquivo(CAMINHO);
         }
 
-        public void PegarSenha(string _Senha){
+        public void PegarSenha(string _Senha)
+        {
             Senha = _Senha;
         }
-        public string SetarSenha(string _senha){
+        public string SetarSenha(string _senha)
+        {
             this.Senha = _senha;
             return this.Senha;
         }
-        public void PegarId(int _id){
+
+        public string RetornarSenha()
+        {
+            return this.Senha;
+        }
+
+        public void PegarId(int _id)
+        {
             Id = _id;
         }
-        public List<int> RetornarIds() {
+        public int RetornarId()
+        {
+            return this.Id;
+        }
+
+        public List<int> RetornarIds()
+        {
             List<int> Ids = new List<int>();
             foreach (var item in LerDados())
             {
@@ -52,14 +68,14 @@ namespace ProjetoInstaDev.Models
 
         public void Criar(Usuario u)
         {
-            string[] linha = {Preparar(u)};
+            string[] linha = { Preparar(u) };
             File.AppendAllLines(CAMINHO, linha);
         }
 
         public void Deletar(int id)
         {
             List<string> linhas = LerTodasAsLinhas(CAMINHO);
-            linhas.RemoveAll(x =>x.Split(";")[0] == id.ToString());
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
             ReescrevaCSV(CAMINHO, linhas);
         }
 
@@ -67,22 +83,22 @@ namespace ProjetoInstaDev.Models
         {
             List<Usuario> usuario = new List<Usuario>();
 
-             string[] linhas = File.ReadAllLines(CAMINHO);
-             foreach (var item in linhas)
-             {
-                 string [] linha = item.Split(";");
+            string[] linhas = File.ReadAllLines(CAMINHO);
+            foreach (var item in linhas)
+            {
+                string[] linha = item.Split(";");
 
-                 Usuario usuario1 = new Usuario();
+                Usuario usuario1 = new Usuario();
 
-                 usuario1.Nome = linha[0];
-                 usuario1.Id = Int32.Parse(linha[1]);
-                 usuario1.Email = linha[2];
-                 usuario1.Senha = linha[3];
-                 usuario1.UserName = linha[4];
-                 usuario1.ImagemUsuario = linha[5];
-                 usuario.Add(usuario1);
-             }
-             return usuario;
+                usuario1.Nome = linha[0];
+                usuario1.Id = Int32.Parse(linha[1]);
+                usuario1.Email = linha[2];
+                usuario1.Senha = linha[3];
+                usuario1.UserName = linha[4];
+                usuario1.ImagemUsuario = linha[5];
+                usuario.Add(usuario1);
+            }
+            return usuario;
         }
 
         public string Preparar(Usuario u)

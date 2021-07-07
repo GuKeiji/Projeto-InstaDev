@@ -27,12 +27,80 @@
 
 <body>
     <div>
+        @switch (ViewData["Title"])
+        {
+            case "Feed":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a href="#"> <img class="click_header" src="~/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/fav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+
+                break;
+            case "Perfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a href="#"> <img class="click_header" src="~/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/fav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+
+                break;
+            case "EditarPerfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a href="#"> <img class="click_header" src="~/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/fav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+
+                break;
+            default:
+                break;
+        }
+        
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
         @switch (ViewData["Title"])
         {
             case "Perfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/wwwroot/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/fav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+
                 <footer>
                     <section class="perfil_footer_sec">
                         <ul class="links_úteis">
@@ -48,6 +116,42 @@
                         <span>© 2021 INSTADEV DO SENAI INFO</span>
                     </section>
                 </footer>
+                break;
+
+                case "EdicaoPerfil":
+                
+                <footer>
+                    <section class="perfil_footer_sec">
+                        <ul class="links_úteis">
+                            <span>Links úteis:</span>
+                            <li><a href="#">Regras de utilização</a></li>
+                            <li><a href="#">Suporte</a></li>
+                            <li><a href="#">Central de ajuda</a></li>
+                            <li><a href="#">Contato</a></li>
+                            <li><a asp-area="" asp-controller="Cadastro" asp-action="Index">Cadastre-se</a></li>
+                        </ul>
+                        <a asp-area="" asp-controller="Feed" asp-action="Index"><img class="footer_logo"
+                        src="~/ImagensCadastro/Instadev@2x.png" alt="Logo_Instadev"></a>
+                        <span>© 2021 INSTADEV DO SENAI INFO</span>
+                    </section>
+                </footer>
+                break;
+                
+                case "Feed":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/wwwroot/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/fav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+
                 break;
             default:
                 break;

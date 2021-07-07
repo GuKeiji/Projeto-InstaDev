@@ -4,6 +4,68 @@
     box-sizing: 0;
 }
 
+.grid {
+    margin: 0, 25.65%;
+    width: 48.697%;
+}
+
+header {
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens_header {
+    background-color: white;
+    height: 50.9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo_principal {
+    background-color: white;
+    width: 8.34%;
+    height: 100%;
+}
+
+.pesquisa_principal {
+    background-color: #fafafa;
+    border: 1px solid #dcdcdc;
+    width: 23%;
+    height: 100%;
+    border-radius: 2px;
+    padding-left: 7px;
+    /* text-align: center; */
+    text-justify: center;
+    color: #252525;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+}
+
+.pesquisa_principal::placeholder {
+    text-align: center;
+}
+
+.apoio_click {
+    background-color: white;
+    width: 29%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.click_header {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
 .perfil_btn_publi_c i{
     font-size:  1.6vw;
     color: #000000;

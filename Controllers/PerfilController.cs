@@ -23,7 +23,7 @@ namespace Projeto_InstaDev.Controllers
         [Route("Editar")]
         public IActionResult Editar()
         {
-            return LocalRedirect("~/EditarPerfil");
+            return LocalRedirect("~/EdicaoPerfil");
         }
 
         [Route("Logout")]
