@@ -27,6 +27,14 @@ namespace ProjetoInstaDev.Models
             this.Senha = _senha;
             return this.Senha;
         }
+        public string RetornarSenha()
+        {
+            return this.Senha;
+        }
+        public int RetornarId()
+        {
+            return this.Id;
+        }
         public void PegarId(int _id){
             Id = _id;
         }
@@ -45,7 +53,7 @@ namespace ProjetoInstaDev.Models
         public void Alterar(Usuario u)
         {
             List<string> linhas = LerTodasAsLinhas(CAMINHO);
-            linhas.RemoveAll(x => x.Split(";")[4] == u.UserName.ToString());
+            linhas.RemoveAll(x => x.Split(";")[1] == u.Id.ToString());
             linhas.Add(Preparar(u));
             ReescrevaCSV(CAMINHO, linhas);
         }

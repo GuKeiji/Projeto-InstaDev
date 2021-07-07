@@ -20,6 +20,9 @@
         case "Login":
             <link rel="stylesheet" href="~/css/Login.css" />
             break;
+        case "EdicaoPerfil":
+            <link rel="stylesheet" href="~/css/edicaoperfil.css" />
+            break;
         default:
             break;
     }
@@ -27,6 +30,47 @@
 
 <body>
     <div>
+        @switch (ViewData["Title"])
+        {
+            case "Feed":
+            <link rel="stylesheet" href="~/css/edicaoperfil.css" />
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/wwwroot/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a asp-area="" asp-controller="Feed" asp-action="Index"> <img class="click_header"
+                            src="~/wwwroot/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/fav_click.png" alt=""> </a>
+                            <a asp-area="" asp-controller="Perfil" asp-action="Index"> <img class="click_header"
+                            src="~/wwwroot/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+                break;
+            case "Perfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/wwwroot/img/InstadevLogo.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a asp-area="" asp-controller="Feed" asp-action="Index"> <img class="click_header"
+                            src="~/wwwroot/img/home_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/direct_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/nav_click.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/wwwroot/img/fav_click.png" alt=""> </a>
+                            <a asp-area="" asp-controller="Perfil" asp-action="Index"> <img class="click_header"
+                            src="~/wwwroot/img/perfil_click.png" alt=""> </a>
+                        </nav>
+                    </div>
+                </header>
+                break;
+            default:
+                break;
+        }
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

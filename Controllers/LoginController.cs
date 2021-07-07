@@ -35,6 +35,7 @@ namespace Projeto_InstaDev.Controllers
             {
                 HttpContext.Session.SetString("_username", logado.Split(";")[4]);
                 HttpContext.Session.SetString("_Nome", logado.Split(";")[0]);
+                HttpContext.Session.SetString("_IdUsuario", logado.Split(";")[1]);
                 return LocalRedirect("~/Feed/Listar");
             }
             // else
