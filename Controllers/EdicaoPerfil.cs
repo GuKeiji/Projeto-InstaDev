@@ -51,10 +51,13 @@ namespace Projeto_InstaDev.Controllers
 
                 usuarioEditar.ImagemUsuario = file.FileName;
             }
-            else
+            else if (UsuarioLogado.ImagemUsuario != "padrao.png")
             {
                 usuarioEditar.ImagemUsuario = UsuarioLogado.ImagemUsuario;
-                // usuarioEditar.ImagemUsuario = "padrao.png";
+            }
+            else
+            {
+                usuarioEditar.ImagemUsuario = "padrao.png";
             }
             UsuarioLogado.Alterar(usuarioEditar);
             // HttpContext.Session.Remove("_username");
@@ -65,16 +68,8 @@ namespace Projeto_InstaDev.Controllers
         [Route("ExcluirConta")]
         public IActionResult Excluir(int id)
         {
-            Usuario secao = usuarioPai.LerDados().Find(x => x.RetornarId() == Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
-            // foreach (Post p in postPai.ListarFeed())
-            // {
-            //     if (post.EnviadoPor.Id == UsuarioLogado.Id)
-
-            //     {
-            //         postPai.Deletar(post);
-            //     }
-            // }
-            usuarioPai.Deletar(id);
+            Usuario UsuarioLogado = usuarioPai.LerDados().Find(x => x.RetornarId() == Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
+            usuarioPai.Deletar(UsuarioLogado.RetornarId());
             ViewBag.Usuarios = usuarioPai.LerDados();
             return LocalRedirect("~/");
         }
