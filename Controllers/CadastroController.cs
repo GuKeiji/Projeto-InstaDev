@@ -24,6 +24,7 @@ namespace Projeto_InstaDev.Controllers
             Novousuario.SetarSenha(form["Senha"]);
             Novousuario.UserName = form["UserName"];
             Novousuario.SetarId();
+            Novousuario.ImagemUsuario = "padrao.png";
 
             UsuarioModel.Criar(Novousuario);
 

@@ -51,13 +51,9 @@ namespace Projeto_InstaDev.Controllers
 
                 usuarioEditar.ImagemUsuario = file.FileName;
             }
-            else if (UsuarioLogado.ImagemUsuario != "padrao.png")
-            {
-                usuarioEditar.ImagemUsuario = UsuarioLogado.ImagemUsuario;
-            }
             else
             {
-                usuarioEditar.ImagemUsuario = "padrao.png";
+                usuarioEditar.ImagemUsuario = UsuarioLogado.ImagemUsuario;
             }
             UsuarioLogado.Alterar(usuarioEditar);
             // HttpContext.Session.Remove("_username");
