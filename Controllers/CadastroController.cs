@@ -21,7 +21,7 @@ namespace Projeto_InstaDev.Controllers
             Novousuario.Nome = form["Nome"];
             // Novousuario.SetarId(Novousuario.GerarId(Novousuario.PegarId()));
             Novousuario.Email = form["Email"];
-            Novousuario.PegarSenha(form["Senha"]);
+            Novousuario.SetarSenha(form["Senha"]);
             Novousuario.UserName = form["UserName"];
             Novousuario.SetarId();
 

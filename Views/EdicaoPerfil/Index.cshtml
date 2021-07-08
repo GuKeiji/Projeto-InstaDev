@@ -1,0 +1,77 @@
+@model Usuario
+@{
+    ViewData["Title"] = "EdicaoPerfil";
+}
+
+<div class="apoio_edicao grid">
+    <section class="secao_lateral">
+        <div class="opcao_lateral">
+            <hr class="barra_selecao">
+            <h1 class="opcao_lateral"> Editar Perfil </h1>
+        </div>
+    </section>
+
+    <hr class="slide_bar">
+
+    <form class="edicao_Perfil" method="POST" action='@Url.Action("Editar")' enctype="multipart/form-data" >
+
+
+        <article class="apoio_infos apoio_img_fixa">
+
+            <div class="instrucao_fixa">
+                <img src="~/img/Usuario/@ViewBag.UsuarioLogado.ImagemUsuario">
+            </div>
+
+            <div class="instrucao_movel edita_foto_perfil">
+                <h1> @ViewBag.UsuarioLogado.Nome </h1>
+                <label for="file"> Alterar foto de perfil </label>
+                <input type="file" id="file" name="file"></input>
+            </div>
+        </article>
+
+
+        <article class="apoio_infos">
+            <div class="instrucao_fixa">
+                <span>Nome</span>
+            </div>
+
+            <div class="instrucao_movel">
+                <input required value="@ViewBag.UsuarioLogado.Nome" class="input_estilo" placeholder="Novo nome" name="Nome">
+                <p class="instrucao_movel"> Ajude as pessoas a descobrir sua conta usando o nome pelo qual você é
+                    conhecido: seu nome completo, apelido ou nome comercial. </p>
+                <p class="instrucao_movel"> Você pode alterar o seu nome apenas duas vezes a cada 14 dias. </p>
+            </div>
+        </article>
+
+
+        <article class="apoio_infos">
+            <div class="instrucao_fixa">
+                <span> Nome de Usuário </span>
+            </div>
+
+            <div class="instrucao_movel">
+                <input required value="@ViewBag.UsuarioLogado.UserName" class="input_estilo" placeholder="Novo nome de usuário" name="NomeUsuario">
+                <p class="instrucao_movel"> Na maioria dos casos, você poderá alterar seu nome de usuário novamente
+                    para nascimento_tr por mais 14 dias. </p>
+                <p class="instrucao_movel"> Informações Pessoais. Forneça suas informações pessoais, mesmo se a
+                    conta for usada para uma empresa, um animal de estimação ou outra coisa. Elas não farão parte do
+                    seu perfil público. </p>
+            </div>
+        </article>
+
+
+        <article class="apoio_infos">
+            <div class="instrucao_fixa">
+                <span> Email </span>
+            </div>
+
+            <div class="instrucao_movel">
+                <input required value="@ViewBag.UsuarioLogado.Email" class="input_estilo" placeholder="Novo Email" name="Email">
+                <div class="envia_alteracao">
+                    <button type="submit"> Enviar </button>
+                    <a asp-area="" asp-Controller="EditarPerfil" asp-action="Excluir"> Desativar minha conta definitivamente </a>
+                </div>
+            </div>
+        </article>
+    </form>
+</div>

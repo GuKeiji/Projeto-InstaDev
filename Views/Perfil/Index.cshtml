@@ -6,17 +6,17 @@
 
 <div class="perfil_grid">
     <section class="perfil_container perfil_publi_info">
-        <img class="perfil_fto_principal" src="/img/padrao.png" alt="Foto de perfil">
+        <img class="perfil_fto_principal" src="~/img/Usuario/@ViewBag.UsuarioLogado.ImagemUsuario" alt="Foto de perfil">
         <section class="perfil_informacoes">
-            <h1 class="perfil_userName">@ViewBag.UserName</h1>
+            <h1 class="perfil_userName">@ViewBag.UsuarioLogado.UserName</h1>
             <div class="perfil_dados">
                 <span>0 publicações</span>
                 <span>129 seguindo</span>
                 <span>214 seguidores</span>
             </div>
             <div class="perfil_nome_sair">
-                <h2 class="perfil_name">@ViewBag.Nome</h2>
-                <a href="#">Editar Perfil</a>
+                <h2 class="perfil_name">@ViewBag.UsuarioLogado.Nome</h2>
+                <a asp-area="" asp-controller="EdicaoPerfil" asp-action="Index">Editar Perfil</a>
                 <a asp-area="" asp-controller="Perfil" asp-action="Logout">Sair</a>
             </div>
         </section>

@@ -20,6 +20,9 @@
         case "Login":
             <link rel="stylesheet" href="~/css/Login.css" />
             break;
+        case "EdicaoPerfil":
+            <link rel="stylesheet" href="~/css/edicaoperfil.css" />
+            break;
         default:
             break;
     }
@@ -27,6 +30,63 @@
 
 <body>
     <div>
+        @switch (ViewData["Title"])
+        {
+            case "Feed":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/Instadev.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a asp-area="" asp-controller="Feed" asp-action="Index"> <img class="click_header"
+                            src="~/img/Vector.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/plane 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/compass 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/Vector (1).png" alt=""> </a>
+                            <a asp-area="" asp-controller="Perfil" asp-action="Index"> <img class="click_header_perfil"
+                            src="~/img/Usuario/@ViewBag.UsuarioLogado.ImagemUsuario" alt=""></a>
+                        </nav>
+                    </div>
+                </header>
+                break;
+            case "Perfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/Instadev.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a asp-area="" asp-controller="Feed" asp-action="Index"> <img class="click_header"
+                            src="~/img/Vector.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/plane 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/compass 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/Vector (1).png" alt=""> </a>
+                            <a asp-area="" asp-controller="Perfil" asp-action="Index"> <img class="click_header_perfil"
+                            src="~/img/Usuario/@ViewBag.UsuarioLogado.ImagemUsuario" alt=""></a>
+                        </nav>
+                    </div>
+                </header>
+                break;
+            case "EdicaoPerfil":
+                <header>
+                    <div class="itens_header grid">
+                        <img class="logo_principal" src="~/img/Instadev.png">
+                        <input class="pesquisa_principal" placeholder="Pesquise no InstaDev">
+                        <nav class="apoio_click">
+                            <a asp-area="" asp-controller="Feed" asp-action="Index"> <img class="click_header"
+                            src="~/img/Vector.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/plane 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/compass 1.png" alt=""> </a>
+                            <a href="#"> <img class="click_header" src="~/img/Vector (1).png" alt=""> </a>
+                            <a asp-area="" asp-controller="Perfil" asp-action="Index"> <img class="click_header_perfil"
+                            src="~/img/padrao.png" alt=""></a>
+                        </nav>
+                    </div>
+                </header>
+                break;
+            default:
+                break;
+        }
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

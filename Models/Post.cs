@@ -23,6 +23,7 @@ namespace ProjetoInstaDev.Models
 
         public Usuario EnviadoPor { get; set; }
         public string nomeEnviado { get; set; }
+        public string fotoEnviado;
 
         private const string CAMINHO = "Database/Post.csv";
 
@@ -50,7 +51,7 @@ namespace ProjetoInstaDev.Models
         }
         public string Preparar(Post p)
         {
-            return $"{p.Id};{p.Legenda};{p.Imagem};{p.nomeEnviado}";
+            return $"{p.Id};{p.Legenda};{p.Imagem};{p.nomeEnviado};{p.fotoEnviado}";
         }
 
         public void Criar(Post p)
@@ -75,6 +76,7 @@ namespace ProjetoInstaDev.Models
                 post.Legenda = linha[1];
                 post.Imagem = linha[2];
                 post.nomeEnviado = linha[3];
+                post.fotoEnviado = linha[4];
                 posts.Add(post);
             }
             posts.Reverse();

@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoInstaDev.Models;
@@ -13,6 +14,8 @@ namespace Projeto_InstaDev.Controllers
         [Route("Listar")]
         public IActionResult Index()
         {
+            Usuario UsuarioLogado = usuarioModel.LerDados().Find(x => x.RetornarId() == Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
+            ViewBag.UsuarioLogado = UsuarioLogado;
             ViewBag.Usuarios = usuarioModel.LerDados();
             ViewBag.UserName = HttpContext.Session.GetString("_username");
             ViewBag.Nome = HttpContext.Session.GetString("_Nome");
@@ -23,7 +26,7 @@ namespace Projeto_InstaDev.Controllers
         [Route("Editar")]
         public IActionResult Editar()
         {
-            return LocalRedirect("~/EditarPerfil");
+            return LocalRedirect("~/EdicaoPerfil");
         }
 
         [Route("Logout")]

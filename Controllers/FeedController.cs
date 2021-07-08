@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,6 +14,8 @@ namespace ProjetoInstaDev.Controllers
         [Route("Listar")]
         public IActionResult Index()
         {
+            Usuario UsuarioLogado = UsuarioPai.LerDados().Find(x => x.RetornarId() == Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
+            ViewBag.UsuarioLogado = UsuarioLogado;
             ViewBag.Posts = postPai.ListarFeed();
             ViewBag.Usuarios = UsuarioPai.LerDados();
             ViewBag.UserName = HttpContext.Session.GetString("_username");
@@ -20,10 +23,12 @@ namespace ProjetoInstaDev.Controllers
             return View();
         }
         [Route("Cadastrar")]
-        public IActionResult CadastrarPost(IFormCollection form){
+        public IActionResult CadastrarPost(IFormCollection form)
+        {
+            Usuario UsuarioLogado = UsuarioPai.LerDados().Find(x => x.RetornarId() == Int32.Parse(HttpContext.Session.GetString("_IdUsuario")));
             ViewBag.Usuarios = UsuarioPai.LerDados();
             ViewBag.UserName = HttpContext.Session.GetString("_username");
-            
+
             Post novoPost = new Post();
             novoPost.SetarId();
             novoPost.Legenda = form["Legenda"];
@@ -48,9 +53,10 @@ namespace ProjetoInstaDev.Controllers
             }
             // else
             // {
-            //     novoPost.Imagem = "semimagem.png";
+            //     novoPost.Imagem = "~/img/padrao.png";
             // }
             novoPost.nomeEnviado = HttpContext.Session.GetString("_username");
+            novoPost.fotoEnviado = UsuarioLogado.ImagemUsuario;
             postPai.Criar(novoPost);
             ViewBag.Posts = postPai.ListarFeed();
 
